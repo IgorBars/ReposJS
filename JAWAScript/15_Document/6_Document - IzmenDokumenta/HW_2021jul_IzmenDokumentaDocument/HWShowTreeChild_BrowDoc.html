@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+  <ul>
+    <li>Животные
+      <ul>
+        <li>Млекопитающие
+          <ul>
+            <li>Коровы</li>
+            <li>Ослы</li>
+            <li>Собаки</li>
+            <li>Тигры</li>
+          </ul>
+        </li>
+        <li>Другие
+          <ul>
+            <li>Змеи</li>
+            <li>Птицы</li>
+            <li>Ящерицы</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Рыбы
+      <ul>
+        <li>Аквариумные
+          <ul>
+            <li>Гуппи</li>
+            <li>Скалярии</li>
+          </ul>
+        </li>
+        <li>Морские
+          <ul>
+            <li>Морская форель</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <script>
+    // let lis = document.getElementsByTagName('li');
+    let lis = document.body.querySelectorAll("li");
+    for (let li of lis) {
+        let innerCount = li.getElementsByTagName("li").length;
+        if (!innerCount) continue;
+        li.firstChild.data += ' [' + innerCount + ']';
+        // li.firstChild.data += ` [${innerCount}]`;
+    }
+  </script>
+
+</body>
+</html>

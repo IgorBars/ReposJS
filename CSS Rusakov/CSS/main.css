@@ -1,0 +1,6 @@
+/* Первый CSS-файл для "CSS Day9.html"*/
+
+@import url("color.css");
+p {
+    font-size: 150%;
+}

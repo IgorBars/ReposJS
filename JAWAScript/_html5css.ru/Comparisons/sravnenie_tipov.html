@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Comparison</h2>
+
+<p id="demo"></p>
+
+<script>
+let voteable;
+let a = Number("22");   // без приведения к числу будут сравн как строки
+let b = Number("12s");
+if (isNaN(a) || isNaN(b)) {                             // проверка на число
+    voteable = "Input is not a number";
+} else {
+    voteable = a < b;
+}
+document.getElementById("demo").innerHTML = voteable;   // Input is not a number
+</script>
+
+</body>
+</html>

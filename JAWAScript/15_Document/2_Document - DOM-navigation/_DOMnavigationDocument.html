@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript _DOMnavigationDocument
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            alert( "Из HEAD: " + document.body ); // null, <body> ещё нет
+        </script>
+	</head>
+	<body>
+        <script src="_DOMnavigationDocument.js"></script>
+        <script>
+            alert( "Из BODY: " + document.body ); // HTMLBodyElement, теперь он есть
+        </script>
+	</body>
+</html>

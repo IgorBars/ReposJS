@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 0.5px solid black;
+      padding: 3px;
+      text-align: center;
+    }
+
+    td {
+      background-color: #fafae5;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: #E6E6E6;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="calendar"></div>
+  <script>
+    function createCalendar(elem, year, month) {
+      let firstDayMonJS = new Date(year, month - 1); // первое число месяца (с учётом того, что месяцы в JS начинаются от 0, а не от 1)
+      alert("new Date(year, month):  " + firstDayMonJS );  //  Sat Sep 01 2012
+      let firstDayWeek = firstDayMonJS.getDay();           //номер дня недели, на которьій падает 1-е число 
+      if(firstDayWeek == 0) firstDayWeek = 7;              // европейская нумерация дней недели (Вс - 7)
+      alert(firstDayWeek);                                 //  6
+      let lastDay = (new Date(year, month, 0)).getDate();  // последнее число месяца автокоррекцией
+
+      let dayWeekName = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
+
+      let table = document.createElement("table");
+      let trTh = document.createElement("tr");            // строка заголовка
+      table.append(trTh);
+      for(let i = 0; i <= 6; i++) {
+        let thDayWeekName = document.createElement("th");  // ячейки заголовка
+        thDayWeekName.innerText = dayWeekName[i];          // заполняем ячейки заголовка именами дней недели
+        trTh.append(thDayWeekName);
+      }
+      table.append(trTh);
+
+      let trWeek = [];                                      //  массив строк таблицьі
+      let laufTagMon = 1;                                   // текущее число месяца
+      for(let j = 0; j <= 5; j++) {                         // цьікл строк
+        trWeek[j] = document.createElement("tr");           //  строка недели
+        for(let i = 1; i <= 7; i++) {                       // цьікл ячеек в строке (столбцов)
+          let tdTagWeek = document.createElement("td");     //  ячейка дня недели
+          if ( (j == 0 && firstDayWeek <= i) || (j !== 0 && laufTagMon <= lastDay) ) {//начало и конец заполнения
+            tdTagWeek.innerText = laufTagMon;
+            laufTagMon++;
+          }
+          trWeek[j].append(tdTagWeek);
+        }
+        table.append(trWeek[j]);
+        if( laufTagMon == lastDay + 1) break; // исключ добавления последней пустой строки, если меньше 6 строк
+      }    
+      elem.append(table);
+    }
+
+    createCalendar(calendar, 2012, 9);  // 5 строк недель
+    createCalendar(calendar, 2021, 2);  // 4 строки недель
+    createCalendar(calendar, 2021, 8);  // 6 строк недель
+    
+  </script>
+
+</body>
+</html>

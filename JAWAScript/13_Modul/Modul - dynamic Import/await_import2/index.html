@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+    <script>    //  Динамический импорт работает в обычных скриптах, он не требует указания type="module"
+      async function load() {                                               //ЗАПУСКАТИ ФАЙЛ У Live Server  !!!
+        let {hi, bye} = await import('./say.js');
+        hi();   // Привет!
+        bye();  // Пока!
+      }
+      load();
+    </script>
+    
+</body>
+</html>

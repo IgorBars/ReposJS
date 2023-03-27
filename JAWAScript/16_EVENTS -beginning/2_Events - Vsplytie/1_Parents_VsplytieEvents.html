@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript 1_Parents_VsplytieEvents
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      body * {            /* стиль потомков body, но не самого body */
+        margin: 10px;
+        border: 1px solid blue;
+        background-color: burlywood;
+      }
+    </style>
+	</head>
+	<body>
+
+		<form onclick="alert('form')">FORM
+      <div onclick="alert('div')">DIV
+        <p onclick="alert('p')">P</p>
+      </div>
+    </form>
+
+    <script src="1_Parents_VsplytieEvents.js"></script>
+	</body>
+</html>

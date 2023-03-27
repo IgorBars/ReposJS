@@ -1,0 +1,34 @@
+/* JawaScript - Ex_delay_DecorFUNCAdv.     
+Создайте декоратор delay(f, ms), который задерживает каждый вызов f на ms миллисекунд.
+Pешение должно передавать все аргументы и контекст this
+ */
+'use strict';
+
+alert("Start Ex_delay_DecorFUNCAdv");
+
+function f(x, y) {
+    alert(x + y);
+}
+
+function delay(f, timeout) {
+
+    function wrapper(...args) {
+
+        // f.apply(this, args);
+        let timerId = setTimeout(() => {
+            f.apply(this, args);
+        }, timeout);
+    }
+
+    return wrapper;
+}
+
+let f2000 = delay(f, 2000);
+let f4000 = delay(f, 4000);
+
+f2000("test2000", "test2000"); // показывает "test" после 1000 мс
+f4000("test4000", "test4000"); // показывает "test" после 1500 мс
+
+
+
+alert("End");

@@ -1,0 +1,79 @@
+/* HWork Day14 */
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+/*  */
+/* div {
+    float: left;
+     border: 2px solid #000; 
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.clear {
+    clear: both;
+}
+.float DIV {
+    float: left;
+}
+div.block_1 {
+    background-color: rgb(103, 167, 167);
+    height: 125px;
+    width: 100px;
+}
+div.block_2 {
+    background-color: teal;
+    height: 130px;
+    width: 110px;
+}
+div.block_3 {
+    background-color: rgb(25, 90, 150);
+    height: 140px;
+    width: 120px;
+}
+div.block_4 {
+    background-color: rgb(4, 78, 78);
+    height: 150px;
+    width: 130px;
+}
+div.block_5 {
+    background-color: rgb(11, 54, 54);
+    height: 160px;
+    width: 140px;
+}
+NAV {
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+}
+.menu Li {
+    background-color: rgba(59, 248, 11, 0.452);
+    color: rgba(28, 5, 233, 0.794);
+    float: left;
+    font-size: 150%;
+    list-style: none;
+    padding: 5px 20px;
+    margin: 0;
+}
+ul {    /* для задания нулевых отступов - в селекторе не указывать класс!!! */
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+.menu Li A {
+    text-decoration-line: none;
+    margin: 0px 21px;
+}
+.menu Li:hover {
+    background-color: rgba(243, 86, 24, 0.863);
+}
+.menu Li A:hover {
+    color: rgba(255, 4, 87, 0.52);
+
+}

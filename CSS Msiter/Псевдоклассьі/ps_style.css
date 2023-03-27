@@ -1,0 +1,19 @@
+a.snowman:link {
+    color: rgb(110, 110, 252);
+ }
+ 
+ a.snowman:visited {
+    color: rgb(247, 144, 247);
+ }
+ 
+ a.snowman:active {
+    color: red;
+ }
+ 
+ a.snowman:hover {
+    text-decoration: none;
+    color: blue;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 1.8em;
+ }

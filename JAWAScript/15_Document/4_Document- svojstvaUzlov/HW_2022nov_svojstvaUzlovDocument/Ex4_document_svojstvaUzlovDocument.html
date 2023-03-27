@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>JScript Ex4_document_svojstvaUzlovDocument
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+    <body>
+        <script src="Ex4_document_svojstvaUzlovDocument.js"></script>
+        <script>
+            alert(document);    // [object HTMLDocument]
+            alert(document.constructor.name);   // HTMLDocument     => (Итак, document – объект класса HTMLDocument.)
+
+            // Методы класса находятся в prototype конструктора (в prototype функции-конструктора класса)
+            //(Например, в HTMLDocument.prototype находятся методы для объектов типа document.)
+
+            // Также внутри prototype есть ссылка на функцию-конструктор:
+            alert(HTMLDocument.prototype.constructor === HTMLDocument);     // true
+            alert(HTMLDocument.prototype.constructor.name);       // HTMLDocument (функция-конструктор класса HTMLDocument)
+
+            alert(HTMLDocument.prototype.__proto__.constructor.name);   // Document (функция-конструктор класса Document)
+            // значит, вьіше от HTMLDocument по цепочке прототипного наследования находится Document
+
+            alert(HTMLDocument.prototype.__proto__.__proto__.constructor.name); // Node (функция-конструктор класса Node)
+            // значит, еще вьіше от Document по цепочке прототипного наследования находится Node
+
+            alert(HTMLDocument.prototype.__proto__.__proto__.__proto__.constructor.name);   // EventTarget
+            // EventTarget - верхушка прототипного наследования
+        </script>
+    </body>
+</html>

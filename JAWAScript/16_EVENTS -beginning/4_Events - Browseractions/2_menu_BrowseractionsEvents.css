@@ -1,0 +1,25 @@
+.menu li {
+    display: inline-block;
+    margin: 0 2px;
+  }
+  
+  .menu > li a {
+    
+    margin: 0px;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 2px 2px rgba(9, 1, 54, 0.934);
+    border-radius: .5em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.886);
+    color: #f9fafb;
+    border: solid 1px #0076a3;
+    background: #0095cd;
+  }
+  
+  .menu > li:hover a {
+    
+    background: #007ead;
+  }

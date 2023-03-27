@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Контекстный селектор для класса</title>
+  <style>
+   A {                  /* описание свойств для тега А с помощью селектора А*/
+    color: rgb(0, 196, 0);       /* Зеленый цвет текста для всех ссылок */
+   }
+   .menu {                 /* описание свойств для класса */
+    padding: 7px;           /* Поля вокруг текста */
+    border: 1px solid #333; /* Параметры рамки */
+    background: #fc0;       /* Цвет фона */
+   }
+   .menu A { /* описание свойств для тега А, когда он в классе */
+    color: rgb(11, 11, 255); /* Темно-синий цвет ссылок */
+   }
+  </style>
+ </head> 
+ <body>
+  <div class="menu">
+    <a href="http://htmlbook.ru/1.html">Русская кухня</a> |
+    <a href="http://htmlbook.ru/2.html">Украинская кухня</a> |
+    <a href="http://htmlbook.ru/3.html">Кавказская кухня</a>
+  </div>
+  <p><a href="http://htmlbook.ru/text.html">Другие материалы по теме</a></p>
+ </body>
+</html>

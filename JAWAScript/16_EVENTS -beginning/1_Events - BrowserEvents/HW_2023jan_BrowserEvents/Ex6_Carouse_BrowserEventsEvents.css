@@ -1,0 +1,75 @@
+body {
+    padding: 10px;
+  }
+  
+  .carousel {   /* фасад*/
+    position: relative;                                                                                   /* !!! */
+    width: 390px;  /* ширина для вмісту*/       /* а повна ширина: 390px + padding 40px */
+    /* висота: по вмісту + padding */
+    padding: 10px 40px;   /* розширяємо: 10px(верх/низ) 40px(для кнопок) */
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    background: rgb(186, 170, 170);
+  }
+  
+  .carousel img {
+    width: 130px;
+    height: 130px;
+    /* делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок */
+    /*display: block;*/
+  }
+  
+  .arrow {  /* стрілки */
+    position: absolute;                                                                                     /* !!! */
+    top: 55px; /* відносно рамок carousel */
+    padding: 0;
+    background: #ddd;
+    border-radius: 17px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    /*display: block;*/
+    width: 25px;
+    height: 25px;
+  }
+  
+  .arrow:focus {
+    outline: none; /* інакше рамка при фокусі і Enter*/
+  }
+  
+  .arrow:hover {
+    background: rgb(146, 145, 145);
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 7px; /* відносно рамок carousel */
+  }
+  
+  .next {
+    right: 7px;
+  }
+  
+  .gallery {     /* вікно огляду всередині carousel: з прозорою рамкою і схованим вмістом за межами рамки */
+    width: 390px; /* ширина: рівно 3 х img */
+    /* висота: по вмісту img */
+    overflow: hidden; /* скрьіваем элементьі li за пределами gallery*/                                        /* !!! */
+  }
+  
+  .gallery ul {
+    height: 130px; /* висота: рівно img */
+    width: 9999px; /* ширина: з запасом на нові img - дивися величину прокрутки по горизонталі */            /* !!! */
+    margin: 0;
+    padding: 0;
+    /*list-style: none;*/
+    transition: margin-left 500ms;  /*transition: 500ms;*/
+    /* удаляем пустое пространство (c нумерацией) между элементами li, у которых установлен inline-block */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    /* font-size: 0;*/
+  }
+  
+  .gallery li {
+    display: inline-block;  /* горизонтальное меню */
+  }
+

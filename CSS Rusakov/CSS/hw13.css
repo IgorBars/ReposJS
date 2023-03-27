@@ -1,0 +1,32 @@
+/* для HWork Day13_Fonts */
+
+@import url("font.css");/**/
+@import url("align.css");
+@import url("color.css");
+
+body {
+background-image: url("../../vscode_img/bg2.jpg");
+    margin: 0;
+    padding: 0;
+}
+H1 {
+    font-size: 150%;
+    
+}
+P {
+    font-size: 110%;
+}
+.lin_grad {
+    background: linear-gradient(90deg, rgb(220, 137, 59), rgb(89, 127, 222));
+    padding-top: 20px;
+    height: 70px;
+}
+.lin_grad H1 {
+    margin: 10px auto;
+    width: 400px;
+}
+
+.rad_grad {
+    background:  radial-gradient(at left, rgb(243, 182, 126), rgb(107, 146, 245));
+
+}

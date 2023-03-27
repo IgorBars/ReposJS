@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript 3_defer_DOMContentLoaded_asyncdeferLoadDoc
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="">
+        <style>
+        </style>
+	</head>
+	<body>
+    
+    <p>...содержимое до скрипта...</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => alert("Дерево DOM готово после скрипта с 'defer'!"));
+    </script>
+
+    <script defer src="https://javascript.info/article/script-async-defer/long.js?speed=1"></script> // (2)
+
+    <p>...содержимое после скрипта...</p>
+
+    <script src="3_defer_DOMContentLoaded_asyncdeferLoadDoc.js"></script>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>универсальный селектор</title>
+  <style type="text/css">
+   .block1 { 
+    width: 200px; 
+    background: rgb(223, 231, 207);
+    padding: 5px;
+    padding-right: 20px; 
+    border: solid 1px black; 
+    float: left;
+   }
+   .block2 { 
+    width: 200px; 
+    background: rgb(233, 223, 183); 
+    padding: 5px; 
+    border: solid 1px black; 
+    float: left; 
+    position: relative; 
+    top: 40px; 
+    left: -30px; 
+   }
+   .block3 { 
+    width: 400px; 
+    background: rgb(228, 226, 226);
+    padding: 5px;
+    padding-right: 20px; 
+    border: solid 1px rgb(68, 3, 3); 
+    float: right;
+   }
+   
+   div * em {color: rgb(255, 2, 2);} /*стиль внуков (и правнуков) DIVа с именами EM, но не их потомков */
+   h5 * {color: rgb(53, 255, 2);} /*стиль всех потомков H5, но не самого Н5 */
+   h4 * em * {color: rgb(57, 2, 255);} /*стиль потомков EM внутри деда ((и старше) h4, но не самого ЕМ */
+   * b {color: rgb(255, 230, 2);} /*стиль B и всех его потомков */
+   * h3 * {color: rgb(255, 2, 221);} /*стиль всех потомков h3, но не самого h3*/
+   
+  </style> <!--relative - относительное положение от block1-->
+ </head>
+ <body style="background:rgb(214, 211, 205);">
+
+  <div class="block1"><h4>Lorem ipsum dolor sit amet, consectetuer 
+    adipiscing elit, <em>sed</em> sed diem nonummy nibh euismod
+     tincidunt ut lacreet dolore magna aliguam erat volutpat.</h4>
+    <div class="block1"> 
+        <h4>Lorem ipsum dolor sit amet, consectetuer 
+            adipiscing elit, <em>sed</em> sed diem nonummy nibh
+            euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.</h4>
+            <div class="block1"> 
+                <h4>Lorem ipsum dolor sit amet, consectetuer 
+                    adipiscing elit, <em>sed</em> sed diem nonummy nibh
+                    euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.</h4>
+            </div>
+    </div>
+    </div>
+
+  <div class="block2"> <h5>Ut wisis <i>wisis <span>sed</span> sed</i> 
+    Ut wisis enim ad minim veniam, quis nostrud 
+    exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex 
+    ea commodo consequat.</h5>
+
+   <div class="block2"><h3>exerci <i>tution <span>sed</span></i> tution ullamcorper suscipit lobortis nisl ut</h3></div>
+    </div> 
+
+   <div class="block3"><h4>Lorem ipsum dolor sit amet, consectetuer 
+    <i> adipiscing elit, <em>sed <b> Lorem <span> sed </span></b></em> sed diem nonummy </i> nibh euismod 
+    tincidunt ut lacreet dolore magna <b>aliguam <em>sed<span>sed</span></em></b>erat volutpat.</h4> 
+
+    <div class="block3">tincidunt <b>aliguam sed <span>consectetuer <i>sed </i> sed</span></b>tincidunt</div>
+    </div>
+
+ </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript Ex4_openMenu2_BrowserEventsEvents
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            .title {background-color: #fae78b; }
+            .menu > ul {
+                margin: 0;
+                list-style: none;
+                padding-left: 20px; 
+                display: none;
+                }
+            .menu .menu1 ul {
+                margin: 0;
+                list-style: none;
+                padding-left: 20px; 
+                display: none;
+                }
+
+            .menu .title:before {
+                content: '▶ ';
+                font-size: 80%;
+                color: green;
+                }
+            .menu .menu1 .titleLi1::before {
+                content: '▶ ';
+                font-size: 80%;
+                color: green;
+                }
+
+            .menu.open .title:before {
+                content: '▼ ';
+                }
+            .menu .menu1.open .titleLi1::before {
+                content: '▼ ';
+                }
+
+            .menu.open > ul {
+                background-color: bisque;
+                display: block;
+                width: 170px;
+                }
+            .menu .menu1.open ul {
+                background-color: rgb(248, 205, 152);
+                display: block;
+                width: 130px;
+                }
+
+        </style>
+	</head>
+	<body>
+        <div class="menu">
+            <span class="title">Сладости (нажми меня)!</span>
+            <ul>
+                <div class="menu1">
+                    <li class="titleLi1">Пирожное()</li>
+                        <ul>
+                            <li>Песочное</li>
+                            <li>Картошка</li>
+                            <li>Медовое</li>
+                        </ul>
+                </div>
+                <div class="menu1">
+                    <li class="titleLi1">Пончик()</li>
+                    <ul>
+                        <li>Ванильньій</li>
+                        <li>Шоколадньій</li>
+                        <li>Имбирньій</li>
+                    </ul>
+                </div>
+                <li>Мёд</li>
+            </ul>
+        </div>
+        <script src="Ex4_openMenu2_BrowserEventsEvents.js"></script>
+	</body>
+</html>

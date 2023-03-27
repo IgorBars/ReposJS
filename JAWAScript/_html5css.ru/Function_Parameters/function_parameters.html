@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Функция получает в параметрьі аргументьі как копии значений, </p>
+<p>поєтому сами значения вне функции не изменяются!</p>
+<p id="demo"></p>
+
+<script>
+z = 3;
+function myFunction(x, y) {
+    if (y === undefined) {
+        y = 0;
+    }    
+    y = y / 2;
+    return "y= " + y + ", z= " + z;
+}
+document.getElementById("demo").innerHTML =  myFunction(2, z);  // y= 1.5, z= 3
+</script>
+
+</body>
+</html>

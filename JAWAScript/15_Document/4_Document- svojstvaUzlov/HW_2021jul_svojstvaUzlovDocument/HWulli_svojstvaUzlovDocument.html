@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <ul class="book">ЧАСТЬ 1
+      <li class="chapter1">Глава 1
+        <li class="chapter1.1">Глава 0.1</li>
+      </li>
+      <li class="chapter1">Глава 2</li>
+    </ul>
+
+    <ul class="book">ЧАСТЬ 2
+      <li class="chapter2">Глава 1</li>
+      <li class="chapter2">Глава 2</li>
+    </ul>
+
+    <script>
+    //   for (let li of document.querySelectorAll('li')) {
+    //     alert(li.innerHTML);
+    //   }
+
+
+      let lis = document.body.getElementsByTagName('li');
+        for (let li of lis) {
+          // alert(li.innerHTML);
+          let title = li.firstChild.data; alert("title: " + title);
+        }
+        alert("li: child: " + lis.length); //вложенньіе li
+    </script>
+</body>
+</html>

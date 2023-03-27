@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9_dataset2_Atributy&SvojstvaDocument 
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+    <body>
+        <style>
+            .order[data-order-state="new"] {  /* -пользовательский атрибут, зарезервированый для использования программистами*/
+              color: green;
+            }
+          
+            .order[data-order-state="pending"] {
+              color: blue;
+            }
+          
+            .order[data-order-state="canceled"] {
+              color: red;
+            }
+          </style>
+          
+          <div id="order" class="order" data-order-state="new">
+            A new order.
+          </div>
+          
+          <script src="9_dataset2_Atributy&SvojstvaDocument.js"></script>
+      </body>
+</html>

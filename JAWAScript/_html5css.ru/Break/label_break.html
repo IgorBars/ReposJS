@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A loop with a break.</p>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+let y;
+Aus: for (y = 0; y < 4; y++) {
+	for (i = 0; i < 10; i++) {
+    	if (i === 3) { break; }             // вьіход из текущего цикла
+        else if (y === 2) { break Aus; }    // вьіход из цикла с меткой "Aus"
+    	text += "The number is " + i + "<br>";
+	}
+    text += "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+<!-- 
+The number is 0
+The number is 1
+The number is 2
+
+The number is 0
+The number is 1
+The number is 2
+
+таким же образом - continue
+ -->

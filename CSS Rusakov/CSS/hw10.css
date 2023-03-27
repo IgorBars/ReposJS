@@ -1,0 +1,21 @@
+/* Home work 10*/
+
+@import url("align.css");
+@import url("color.css");
+.gros13 {
+    font-size: 130%;
+    text-indent: 20px;
+}
+.gros15 {
+    font-size: 1.5em;
+    text-indent: 30px;
+}
+DIV P {
+    text-justify: auto;
+    font-weight: bold;
+}
+/*
+P {
+    font-size: 130%
+}
+*/

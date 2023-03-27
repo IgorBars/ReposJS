@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 5_popup
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        Popup
+        <script>// обработчик на окне-получателе (собьітие "message" - авторизовано)
+            
+            window.addEventListener("message", function(event) {
+                // if (event.origin != '...') 
+                // {   alert("not origin");
+                //     return; // что-то пришло с неизвестного домена. Давайте проигнорируем это
+                // }
+                alert(`Получено ${event.data} из ${event.origin}`);
+                // window.opener.postMessage(`Получил ${event.data}, спасибо!`, '*');      // сообщение в родительское окно
+                event.source.postMessage(`Получил ${event.data}, спасибо!`, '*');
+            }); 
+        </script>
+        
+    </body>
+</html>

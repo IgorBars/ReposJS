@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript 3_tabindex_focusForms
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="">
+    <style>
+      li { cursor: pointer; }
+      :focus { outline: 1px dashed green; }
+    </style>
+	</head>
+	<body>
+    Кликните первый пункт в списке и нажмите Tab. Продолжайте следить за порядком. 
+    Обратите внимание, что много последовательных нажатий Tab могут вывести фокус из iframe с примером.
+    <ul>
+      <li tabindex="1">Один</li>
+      <li tabindex="0">Ноль</li>
+      <li tabindex="2">Два</li>
+      <li tabindex="-1">Минус один</li>
+    </ul>
+
+    <script src="3_tabindex_focusForms.js"></script>
+	</body>
+</html>

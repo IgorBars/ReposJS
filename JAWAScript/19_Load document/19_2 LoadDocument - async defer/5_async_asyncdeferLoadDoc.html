@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript 5_async_asyncdeferLoadDoc
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="">
+        <style>
+        </style>
+	</head>
+	<body>
+    
+    <p>...содержимое перед скриптами...</p>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => alert("DOM готов!"));
+    </script>
+
+    <script async src="https://javascript.info/article/script-async-defer/long.js"></script>
+    <script async src="https://javascript.info/article/script-async-defer/small.js"></script>
+
+    <p>...содержимое после скриптов...</p>
+
+    <script src="5_async_asyncdeferLoadDoc.js"></script>
+	</body>
+</html>

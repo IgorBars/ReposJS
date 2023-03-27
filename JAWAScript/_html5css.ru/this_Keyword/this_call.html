@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var John = {                 // Обьект в литеральной нотации
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+};
+
+let Pers = function(firstName, lastName) {  // Конструктор обьектов
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.fullName = function() {return this.firstName + " " + this.lastName;}
+};
+
+let Bernd = new Pers("Bernd", "Stown");
+
+document.getElementById("demo").innerHTML =
+"My father is " + Bernd.fullName.call(John); 
+// применяем метод обьекта Bernd к обьекту John с помощью call/apply
+</script>
+
+</body>
+</html>

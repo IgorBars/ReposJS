@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Формы</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css"> </style></style>  
+	</head>
+	<body>
+        <form name="form" action="script.php" method="GET" enctype="multipart/form-data">
+            <!--enctype="multipart/form-data" - для отправки файлов-->
+            <!--get - отправляемые данные отображаются в строке поиска-->
+            <!--post - отправляемые данные скрыты (не отображаются в строке поиска)-->
+            <fieldset><!--тег разбивки страницы на блоки-->
+                <legend>Основные данные</legend> <!--тег названия блока fieldset-->
+                <div>
+                    <label for="firstname">Ваше имя:</label>
+                    <input id="firstname" type="text" name="firstname" value="Александр" disabled="disabled">
+                    <!--value="Александр" -предустановленное имя, disabled="disabled" - не корректировать предуст имя-->
+                    </input>
+                </div>
+                <div>
+                    <label for="surname">Ваша фамилия:</label>
+                    <input id="surname" type="text" name="surname" placeholder="Введите фамилию">
+                    <!--placeholder - текст-подсказка-->
+                    </input>
+                </div>
+                <div>
+                    <label for="password">Ваш пароль:</label>
+                    <input id="password" type="password" name="password">
+                    <!---->
+                    </input>
+                </div>
+                <div>
+                    <label for="email">Ваш email:</label>
+                    <input id="email" type="email" name="email">
+                    <!--поддержка проверки @-->
+                    </input>
+                <div>
+                    <label for="phone">Ваш телефон:</label>
+                    <input id="phone" type="tel" name="phone">
+                    <!--при исп на мобилках выскакивает цифровая клавиатура-->
+                    <!--проверка ввода только цифр-->
+                    </input>
+                <div>
+                    <label for="site">Ваш сайт:</label>
+                    <input id="site" type="url" name="site">
+                    <!--проверка наличия префикса и домена-->
+                    </input>
+                </div>
+                <div>
+                    <label>Выберите Ваш любимый оттенок:</label>
+                    <input id="radio" type="color" name="1"/>
+                    <!---->
+                </div>
+                <div>
+                    <label>Ваш любимый цвет:</label>
+                    <input type="radio" name="color" value="1"/>Красный
+                    <input type="radio" name="color" value="2"/>Желтый
+                    <input type="radio" name="color" value="3"/>Зеленый
+                    <!--возможность установки только одного из выключателей-->
+                    <!--name и value - с потолка-->
+                </div> 
+                <div>
+                    <label>Ваше любимое блюдо:</label>
+                    <input type="radio" name="food" value="1"/>Суп
+                    <input type="radio" name="food" value="2"/>Мясо
+                    <input type="radio" name="food" value="3"/>Рыба
+                    <!--возможность установки только одного из выключателей-->
+                    <!--name и value - с потолка-->
+                </div>
+                <div>
+                    <label>Ваш заказ:</label>
+                    <input type="checkbox" name="check" value="1"/>Суп
+                    <input type="checkbox" name="check" value="2"/>Мясо
+                    <input type="checkbox" name="check" value="3"/>Рыба
+                    <!--возможность установки нескольких выключателей-->
+                    <!--name и value - с потолка-->
+                </div>
+                <div>
+                    <label for="news">Подпишитесь на новости:</label>
+                    <input id="news" type="checkbox" name="news" value="1" checked="checked"/>
+                    <!--checked="checked" - будет установлен при посещении страницы по умолчанию-->
+                </div>
+            </fieldset>
+            <fieldset><!--тег разбивки страницы на блоки-->
+                <div>
+                    <label for="search">Ваш любимый поисковик:</label>
+                    <input id="search" type="text" name="search" list="serch_list"/>
+                    <datalist id="serch_list">
+                        <option value="Google"></option>
+                        <option value="Яндекс"></option>
+                    </datalist>
+                    <!--option value="Google" -подсказки по умолчанию-->
+                    <!--свой вариант тоже возможен для ввода-->
+                    <!--datalist привязан к input-->
+                </div>
+                <div>
+                    <label for="file">Отправить файл:</label>
+                    <input id="file" type="file" name="file"/>
+                    <!--см атрибут enctype="multipart/form-data" в теге Form-->
+                </div>
+                <div>
+                    <label for="count">Количество копий:</label>
+                    <input id="count" type="number" name="count" min="1" max="10"/>
+                    <!---->
+                </div>
+                <div>
+                    <label for="range">Диаппазон:</label>
+                    <input id="range" type="range" name="range" min="1" max="10"/>
+                    <!---->
+                </div>
+                <div>
+                    <label for="date">Дата:</label>
+                    <input id="date" type="date" name="date"/>
+                    <!-- ! FierFox не работает -->
+                </div>
+                <div>
+                    <label for="color">цвет:</label>
+                    <input id="color" type="color" name="color"/>
+                    <!---->
+                </div>
+                <div>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" placeholder="Введите Ваше сообщение">
+                        фффффффффффф <!--!Вводится без Value-->
+                    </textarea>
+                    <!---->
+                </div>
+                <div>
+                    <label for="city">Выберите город:</label>
+                    <select id="city" name="city" size="3"><!--size - размер окна для списка-->
+                        <optgroup label="Крупнейшие города">
+                            <option value="1">Киев</option>
+                            <option value="2">Харьков</option>
+                        </optgroup>
+                        <optgroup label="Крупные города">
+                            <option value="3">Львов</option>     
+                            <option value="4" selected="selected">Одесса</option>
+                        </optgroup>
+                    </select>
+                    <!---->
+                </div>
+                <div>
+                    <input type="hidden" name="article-7" value="100"/>
+                    <!--type="hidden" - скрытая информация, не отображаемая на странице-->
+    
+                    <input type="reset" value="Сбросить"/>
+                    <!--Кнопка сброса введенных данных-->
+    
+                    <input type="submit" name="submit" value="Отправить">
+                    <!---->
+                    </input>
+                </div>
+            </fieldset>          
+        </form>
+    </body>
+</html>

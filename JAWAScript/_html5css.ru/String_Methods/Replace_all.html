@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft! Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var txt = str.replace(/microsoft/g,"W3Schools");    //  /регулярное выражение/ с пометкой g (глобальное совпадение)
+    document.getElementById("demo").innerHTML = txt;    // Please visit W3Schools! Please visit Microsoft!
+}
+
+// Чтобы заменить все совпадения, используйте регулярное выражение с флагом /g (глобальное совпадение):
+// Метод Replace() не изменяет строку, в которой он вызывается. Возвращает новую строку.
+</script>
+
+</body>
+</html>

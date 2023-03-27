@@ -1,0 +1,38 @@
+/* Урок Day15CSS_sprite.css*/
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+/*  */
+
+UL {
+    font-style: 150%;
+    list-style: none;
+}
+li a span {
+    background: url(../vscode_ico/sprites2.png) no-repeat;  /* ссылка на png-файл спрайт-иконок */
+    display: inline-block;  /* трансформация span в блочный элемент */
+    height: 100px;  /* методом проб размер одной из спрайт-иконок */
+    width: 100px;   /* методом проб размер одной из спрайт-иконок */
+}
+li:nth-child(1) a span {
+    background-position: 0px -100px;    /* методом проб позиция 1-й нижней иконки в спрайте-иконок */
+}
+li:nth-child(1) a:hover span {
+    background-position: 0px 0px;   /* методом проб позиция 1-й иконки в спрайте-иконок */
+}
+li:nth-child(2) a span {
+    background-position: -200px -100px;
+}
+li:nth-child(2) a:hover span {
+    background-position: -200px 0;
+}
+li:nth-child(3) a span {
+    background-position: -300px -100px;
+}
+li:nth-child(3) a:hover span {
+    background-position: -300px 0;
+}
+/* как альтернатива этому сложному способу */
+/* можно нарезать картинки нужных иконок */
+/* и указывать соответствующие в беккраунде */

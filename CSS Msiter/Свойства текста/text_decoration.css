@@ -1,0 +1,11 @@
+body {
+    font-size: 1.8em;
+    color: navy;
+ }
+ h3 {
+    color: #fff3cc;
+    background-color: rgba(0, 0, 153, 0.315);
+ }
+ ul {
+    text-decoration: line-through;
+ }

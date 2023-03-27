@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.alert {
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+    .red {
+        font-weight: bold;
+        color: rgb(250, 2, 2);
+    }
+    .green {
+        font-weight: bold;
+        color: rgb(2, 250, 43);
+    }
+
+</style>
+</head>
+<body>
+      <ul id="ul">
+        <li id="one" class="red">1</li>
+        <li id="two" class="red">4</li>
+      </ul>
+    <script>//<li>2</li><li>3</li>
+        // let one = document.getElementById("one");
+        // let li2 = document.createElement("li");
+        // li2.innerHTML = '<li class="green">2</li>';
+        // one.after(li2);
+
+        // let two = document.getElementById("two");
+        // let li3 = document.createElement("li");
+        // li3.innerHTML = '<li class="green">3</li>';
+        // two.before(li3);
+
+
+        // let one = document.getElementById("one");
+        // let li2 = document.createElement("li");
+        // let li3 = document.createElement("li");
+        // li2.innerHTML = '<li class="green">2</li>';
+        // li3.innerHTML = '<li class="green">3</li>';
+        // one.after(li2, li3);
+
+
+        let one = document.getElementById("one");
+        one.insertAdjacentHTML("afterend", '<li class="green">2</li><li class="green">3</li>');
+
+    </script>
+
+
+</body>
+</html>

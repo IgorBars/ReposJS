@@ -1,0 +1,24 @@
+/* Урок 14 flow around blocks*/
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+/*  */
+.clear {    /* Отмена позиционирования */
+    clear: both; /* скасовуємо дію float */
+    }
+#left {
+    float: left;
+    font-size: 150%;
+    margin-right: 30px;
+}
+#left H3{
+    margin: 0;
+}
+#right P {
+    margin: 0;
+    padding: 0;
+}
+footer {
+    text-align: center;
+}

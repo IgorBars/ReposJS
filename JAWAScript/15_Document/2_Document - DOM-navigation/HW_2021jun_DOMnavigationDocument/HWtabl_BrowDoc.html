@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 3px 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <table id="table">
+      <tr>
+        <td>1:1</td><td>2:1</td><td>3:1</td><td>4:1</td><td>5:1</td>
+      </tr>
+      <tr>
+        <td>1:2</td><td>2:2</td><td>3:2</td><td>4:2</td><td>5:2</td>
+      </tr>
+      <tr>
+        <td>1:3</td><td>2:3</td><td>3:3</td><td>4:3</td><td>5:3</td>
+      </tr>
+      <tr>
+        <td>1:4</td><td>2:4</td><td>3:4</td><td>4:4</td><td>5:4</td>
+      </tr>
+      <tr>
+        <td>1:5</td><td>2:5</td><td>3:5</td><td>4:5</td><td>5:5</td>
+      </tr>
+    </table>
+    
+    <script>
+  // alert(table.rows.length);
+
+  // рабочий код (без доступа к єлементам):
+        // for(let horStr of table.rows) {       //по строкам
+        //   alert(horStr.innerHTML);
+          // for(let elem of horStr.cells)        //по ячейкам
+          // alert(elem.innerHTML); //
+        // }
+
+  // рабочий код (доступ к нужньім єлементам врукопашную):
+      // alert(table.rows[0].cells[0].innerHTML);
+      // alert(table.rows[1].cells[1].innerHTML);
+      // alert(table.rows[2].cells[2].innerHTML);
+      // alert(table.rows[3].cells[3].innerHTML);
+      // alert(table.rows[4].cells[4].innerHTML);
+
+  // Pабочий код (построчно-поячеечньій перебор всех єлементов):
+    // for(let y = 0; y < table.rows.length; y++) {
+    //   for(let x = 0; x < table.rows[y].cells.length; x++) {
+    //       alert(table.rows[y].cells[x].innerHTML);
+    //   }
+    // }
+
+  // рабочий код (упрощенньій доступ к нужньім єлементам):
+    // for(let i = 0; i < table.rows.length; i++) {
+
+    //   alert(table.rows[i].cells[i].innerHTML);
+    // }
+
+
+    // Кінцевий готовий код
+    // td.style.backgroundColor = 'red';
+      // for(let i = 0; i < table.rows.length; i++) {
+
+      //   table.rows[i].cells[i].style.backgroundColor = 'red';
+      // }
+
+
+// Код Кантора
+      // let table = document.body.firstElementChild;  // <table></table>
+
+      // for(let i = 0; i < table.rows.length; i++) {
+
+      //   let row = table.rows[i];
+
+      //   row.cells[i].style.backgroundColor = 'red';
+      // }
+
+
+//самьій лучший
+              // сервисньій код узнать номер Таблицьі [0]
+      // for (let elem of document.body.children) {          // document.body.children - коллекция єлементов <body>
+      //   alert(elem); // DIV, UL, DIV, SCRIPT
+      // }
+      let table = document.body.children[0];                 // <table></table>
+
+      for(let i = 0; i < table.rows.length; i++) {           // .rows – коллекция строк <tr> таблицы.
+
+        let row = table.rows[i];
+
+        row.cells[i].style.backgroundColor = 'red';         // .cells – коллекция <td> и <th> ячеек, находящихся внутри строки <tr>.
+      }
+
+      let td_childs = table.getElementsByTagName('td');//вложенньіе td-потомки
+          alert("td_childs: " + td_childs.length);// всего потомков
+
+//  Код в виде функции
+      // const draw = (table, color) => {
+      //   const count = table.rows.length
+      //   const trows = table.rows
+
+      //   for (let i = 0; i < count; i++) {
+      //     trows[i].children[i].style.backgroundColor = color
+      //   }
+      // }
+
+      // draw(document.body.firstElementChild, 'red')
+
+
+      // const table = document.body.firstElementChild;  // table
+      // const tbody = table.firstElementChild;          // tbody - всегда в начале таблицьі
+      // const rows  = tbody.children;                   // all tr
+
+      // for (let i = 0; i < rows.length; i++) {
+      //   rows[i].children[i].style.background = 'red'
+      // }
+
+    </script>
+  </body>
+  </html>

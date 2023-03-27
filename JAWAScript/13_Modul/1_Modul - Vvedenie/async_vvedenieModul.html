@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript async_vvedenieModul</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<script async type="module">  //async- никак себя не проявил    //именно тут скрипт подключается как модуль
+            import {counter} from './async_vvedenieModul.js';
+          
+            counter.count();                    // Is countet               в самом конце
+        </script>
+		
+		<script>
+			alert("html: " + this); 			// [object Window]          в 1-ю очередь
+		</script>
+	</body>
+</html> 

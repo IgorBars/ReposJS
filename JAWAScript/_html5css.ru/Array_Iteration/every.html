@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--Метод every () проверяет, проходят ли все значения массива тест (true/false)-->
+<h2>JavaScript Array.every()</h2>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [4, 9, 16, 25, 29];
+var allOver18 = numbers.every(myFunction);
+
+document.getElementById("demo").innerHTML = "All over 18 is " + allOver18;  // All over 18 is: false
+
+function myFunction(value, index, array) {
+    return value > 18;
+}
+</script>
+
+</body>
+</html>

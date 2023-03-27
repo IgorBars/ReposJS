@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Контекстный селектор</title>
+  <style>
+    div { background-color:#ffeea3; }
+   P B {                       /* Определение контекстного селектора */
+        /* назначение свойств тегу В только в случае, если он находится */
+        /* внутри тега Р */
+    font-family: Times, serif; /* Семейство шрифта */
+    color: rgb(58, 58, 228);             /* Синий цвет текста */
+        }
+    * div {background-color:#837dac;}
+   
+  </style>
+ </head> 
+ <body>
+    <div style="background-color:#A3FFC2; height:35px;">
+        <h1 style="margin-bottom:0; text-align:center;">Верхняя часть сайта</h1><!--margin-bottom -Отступ от нижнего края элемента-->
+    </div>
+
+    <div style="background-color:#ffeea3; height:35px;">
+        <b>Жирное начертание текста</b><!---->
+    </div>
+
+    <div style="float: left; position: relative; top: 40px; left: -30px;" >
+        <p><b>Одновременно жирное начертание текста и выделенное цветом</b></p><!---->
+        <!--применение контекстного селектора-->
+        <div>
+            <div>
+                <b>Жирное начертание текста</b><!---->
+            </div>
+            <b>Жирное начертание текста</b><!---->
+        </div> <div>
+            <div > <ul>
+                <li>
+                 <ul>
+                   <li><span>Первый</span></li>
+                   <li><span>Второй</span></li>
+                   <li><span>Третий</span></li>
+                 </ul>
+                </li>
+               </ul>
+                <b>Жирное начертание текста</b><!---->
+            </div>
+            <b>Жирное начертание текста</b><!---->
+        </div>
+    </div>
+ </body>
+</html>

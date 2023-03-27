@@ -1,0 +1,208 @@
+/* CSS-файл для "CSS Day9 font.html"*/
+
+@font-face {
+    font-family: GunnyRewritten;
+    font-style: normal;     /* italic, если поддерживает */
+    font-weight: 400;       /* 600 - 1000 - тонкий* /
+    font-display: swap;     /* font-display: swap рекомендується використовувати для заголовків */
+    src: url("../../vscode_font/gnyrwn971.woff2") format(woff2), url("../../vscode_font/GunnyRewritten.woff") format(woff);
+    /* указание форматов woff и woff2 достаточно для всех современных браузеров */
+}
+
+@font-face {
+    font-family: Arkhip;
+    src: url("../../vscode_font/Arkhip.woff2") format(woff2), url("../../vscode_font/Arkhip.woff") format(woff);
+}
+
+@font-face {
+    font-family: madelikesslab;
+    src: url("../../vscode_font/madelikesslab.woff2") format(woff2), url("../../vscode_font/madelikesslab.woff") format(woff);
+}
+
+@font-face {
+    font-family: ChristmasScriptC;
+    src: url("../../vscode_font/ChristmasScriptC.woff2") format(woff2), url("../../vscode_font/ChristmasScriptC.woff") format(woff);
+}
+
+@font-face {
+    font-family: Asessor;
+    src:  url("../../vscode_font/asessor.woff") format(woff);
+}
+
+@font-face {
+    font-family: Bauhaus;
+    src: url("../../vscode_font/bauhaus.woff") format(woff);
+}
+
+@font-face {
+    font-family: ComicSansMs;
+    src: url("../../vscode_font/comic-sans-ms.woff") format(woff);
+}
+@font-face {
+    font-family: Corrida;
+    src: url("../../vscode_font/corrida.woff") format(woff);
+}
+@font-face {
+    font-family: DroidSans;
+    src: url("../../vscode_font/droid-sans.woff") format(woff);
+}
+@font-face {
+    font-family: DroidSerif;
+    src: url("../../vscode_font/droid-serif.woff") format(woff);
+}
+@font-face {
+    font-family: DroidSerifBold;
+    src: url("../../vscode_font/droid-serif-bold.woff") format(woff);
+}
+@font-face {
+    font-family: DroidSerifBoldItalic;
+    src: url("../../vscode_font/droid-serif-bold-italic.woff") format(woff);
+}
+@font-face {
+    font-family: ErArchitect1251;
+    src: url("../../vscode_font/er-architect-1251.woff") format(woff);
+}
+@font-face {
+    font-family: Favorit;
+    src: url("../../vscode_font/favorit.woff") format(woff);
+}
+@font-face {
+    font-family: KabarettDecorDemoThin;
+    src: url("../../vscode_font/kabarett-decor-demo-thin.woff") format(woff);
+}
+@font-face {
+    font-family: LcBagira;
+    src: url("../../vscode_font/lc_bagira.woff") format(woff);
+}
+@font-face {
+    font-family: LcBlowzy;
+    src: url("../../vscode_font/lc-blowzy.woff") format(woff);
+}
+@font-face {
+    font-family: Maya;
+    src: url("../../vscode_font/maya.woff") format(woff);
+}
+@font-face {
+    font-family: Penguinattackcyrillic;
+    src: url("../../vscode_font/penguinattackcyrillic.woff") format(woff);
+}
+@font-face {
+    font-family: PfkidsproGradefive;
+    src: url("../../vscode_font/pfkidspro-gradefive.woff") format(woff);
+}
+@font-face {
+    font-family: TickerTape;
+    src: url("../../vscode_font/ticker-tape.woff") format(woff);
+}
+
+
+
+
+h1.gunny {
+    font-family: GunnyRewritten;
+    text-align: center;                                             /* контроль присоединения данного css*/
+}
+h1.arkhip {
+    font-family: Arkhip;
+    text-align: center;                                             /* контроль присоединения данного css*/
+}
+h1.madelikes {
+    font-family: madelikesslab;
+    text-align: center;                                             /* контроль присоединения данного css*/
+}
+h1.christmas {
+    font-family: ChristmasScriptC;
+    text-align: center;                                             /* контроль присоединения данного css*/
+}
+h1.asessor {
+    font-family: Asessor;
+    text-align: center;                                             /* контроль присоединения данного css*/
+}
+h1.bauhaus {
+    font-family: Bauhaus;
+    text-align: center;                                             /* контроль присоединения данного css*/
+}
+h1.comicSansMs {
+    font-family: ComicSansMs;
+    text-align: center;                                             /* контроль присоединения данного css*/
+}
+h1.corrida {
+    font-family: Corrida;
+    text-align: center;
+}
+h1.droidSans {
+    font-family: DroidSans;
+    text-align: center; 
+}
+h1.droidSerif {
+    font-family: DroidSerif;
+    text-align: center;
+}
+h1.droidSerifBold {
+    font-family: DroidSerifBold;
+    text-align: center;
+}
+h1.droidSerifBoldItalic {
+    font-family: DroidSerifBoldItalic;
+    text-align: center;
+}
+h1.erArchitect1251 {
+    font-family: ErArchitect1251;
+    text-align: center;
+}
+h1.favorit {
+    font-family: Favorit;
+    text-align: center;
+}
+h1.kabarettDecorDemoThin {
+    font-family: KabarettDecorDemoThin;
+    text-align: center;
+}
+h1.lcBagira {
+    font-family: LcBagira;
+    text-align: center;
+}
+h1.lcBlowzy {
+    font-family: LcBlowzy;
+    text-align: center;
+}
+h1.maya {
+    font-family: Maya;
+    text-align: center;
+}
+h1.penguinattackcyrillic {
+    font-family: Penguinattackcyrillic;
+    text-align: center;
+}
+h1.pfkidsproGradefive {
+    font-family: PfkidsproGradefive;
+    text-align: center;
+}
+h1.tickerTape {
+    font-family: TickerTape;
+    text-align: center;
+}
+
+
+
+h3 {
+    font-family: sans-serif;
+    text-align: left;
+    font-weight: lighter; /* утоньшается начертание*/
+    line-height: 300%; /* отступ между строками */
+}
+
+p {
+    line-height: 90%; /* отступ между строками */
+    text-indent: 20px; /* отступ красной строки */
+}
+.decor {
+    text-decoration-line: underline; /* подчеркивание */
+    text-indent: 0px; /* убираем в классе отступ красной строки */
+}
+.strike {
+    text-decoration-line: line-through; /* зачеркивание */
+}
+.shadow {
+    text-shadow: 5px 2px 5px #555;
+}

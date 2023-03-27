@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+      <body>
+        <ol id="elem"> List Ol
+            <li>Привет</li>
+            <li>Мир</li>
+            <li>Жизнь</li>
+            <li>Прекрасна!</li>
+          </ol>
+          
+          <script>
+            function clear(elem) {
+                elem.innerHTML = '';
+            }
+             setTimeout(() => clear(elem), 1000);
+            // clear(elem); // очищает список
+          </script>
+      </body>
+</html>

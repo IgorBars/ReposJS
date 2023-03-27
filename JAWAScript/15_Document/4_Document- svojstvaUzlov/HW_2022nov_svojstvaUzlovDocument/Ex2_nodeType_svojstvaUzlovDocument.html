@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>JScript Ex2_nodeType_svojstvaUzlovDocument
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+    <body>
+        <script src="Ex2_nodeType_svojstvaUzlovDocument.js"></script>
+        <script>
+            alert(document.body.lastChild.nodeType);    //  1  (elem.nodeType == 1 для узлов-элементов)
+            
+            // Во время выполнения <script> последним DOM-узлом является <script>, 
+            // потому что браузер ещё не обработал остальную часть страницы.
+
+            // Поэтому результатом будет 1 (узел-элемент).
+        </script>
+    </body>
+</html>

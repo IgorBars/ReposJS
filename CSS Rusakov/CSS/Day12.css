@@ -1,0 +1,71 @@
+/* Урок 12 */
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+/* Урок 12 list*/
+body{
+    font-size: 30px;
+}
+ul {list-style-type: none;}
+ul.icon {
+    list-style-image: url(../vscode_ico/Augen.ico);
+}
+nav a {
+    text-decoration-line: none;
+}
+nav a:hover {
+    color: #c00;
+}
+nav ul {
+    margin: 0;     
+    padding: 0;    
+}
+nav li {
+    line-height: 1.3em;   
+}
+
+/* Урок 12 blok*/
+#container {
+    border: 2px solid #000;
+    margin: 0 auto; /*  верх-низ  слева-справа: центрируем по горизонтали*/
+    width: 500px;
+}
+a {
+    border: 1px solid rgb(225, 7, 7);
+}
+p {
+    border: 1px solid rgb(225, 7, 7);
+    margin: 0;
+}
+p:first-child {
+    padding: 5px;
+    margin: 10px;
+}
+BODY > P {
+    border: 2px solid rgb(225, 7, 7);
+    margin: 40px 100px; /* верх-низ   слева-справа */
+    padding: 40px 100px; /* верх-низ  слева-справа */
+}
+.div_1 {
+    border: 1px solid rgb(225, 7, 7);
+    border-radius: 8px;
+    box-shadow: 7px 7px 10px#000;
+    height: 400px;
+    width: 500px;
+}
+.div_2 {
+    border: 2px dashed #000; /* dashed - рамка пунктир */
+    margin: 0 auto; /*  верх-низ  слева-справа: центрируем по горизонтали*/
+    height: 200px;
+    width: 300px;
+}
+.over {
+    border: 2px dashed #000;
+    font-size: 150%;
+    height: 100px;
+    overflow: hidden; /* overflow: hidden - скрываем невмещаемое содержимое */
+    /*overflow: scroll;   overflow: hidden - прокрутка невмещаемое содержимое */
+    overflow: auto; /* overflow: auto - автопоявление прокрутки*/
+    width: 200px;
+}

@@ -1,0 +1,6 @@
+function two() {
+  alert("two");
+}
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Содержание</h1>
+
+    <div class="contents">
+      <ul class="book">ЧАСТЬ 1
+        <li class="chapter1">Глава 1</li>
+        <li class="chapter1">Глава 2</li>
+      </ul>
+    </div>
+    <div class="contents">
+        <ul class="book">ЧАСТЬ 2
+          <li class="chapter2">Глава 1</li>
+          <li class="chapter2">Глава 2</li>
+        </ul>
+      </div>
+    
+    <script>
+      // .closest(css) ищет ближайшего предка, который соответствует CSS-селектору
+// CSS-селектор по классу '.chapter1'
+      let chapter1 = document.querySelector('.chapter1'); // LI (ЧАСТЬ 1)
+    
+      alert(chapter1.closest('.book')); // UL (ЧАСТЬ 1)
+      let elem = chapter1.closest('.book');
+      elem.style.background = 'yellow';
+
+      let chapter2 = document.querySelector('.chapter2'); // LI (ЧАСТЬ 2)
+
+      alert(chapter2.closest('div')); // DIV (ЧАСТЬ 2)
+      let elem1 = chapter2.closest('div');
+      elem1.style.background = 'blue';
+    
+      alert(chapter.closest('h1')); // null (потому что h1 - не предок)
+    </script>
+</body>
+</html>

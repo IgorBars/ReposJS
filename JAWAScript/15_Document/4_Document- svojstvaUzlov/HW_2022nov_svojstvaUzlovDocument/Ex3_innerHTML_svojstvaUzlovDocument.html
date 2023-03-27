@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>JScript Ex3_innerHTML_svojstvaUzlovDocument
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+    <body>
+        <script src="Ex3_innerHTML_svojstvaUzlovDocument.js"></script>
+        <script>
+            let body = document.body;
+
+            body.innerHTML = "<!--" + body.tagName + "-->";
+
+            alert( body.firstChild.data ); // BODY
+            
+            // Заменяем содержимое <body> на комментарий. Он будет иметь вид <!--BODY-->, т.к. body.tagName == "BODY". (Как мы помним, свойство tagName в HTML всегда находится в верхнем регистре)
+            // Этот комментарий теперь является первым и единственным потомком body.firstChild.
+            // Значение свойства data для элемента-комментария – это его содержимое (внутри <!--...-->): "BODY".
+        </script>
+    </body>
+</html>

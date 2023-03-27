@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p>
+
+<script>
+let StartArr = [12, 34, 345, 2, 12, 8, 345, 2, 34];
+// let StartArrLength = StartArr.length;
+let FinArr = [];
+FinArr.length = StartArr.length;
+// FinArr[0] = StartArr[0];
+
+
+// function myFunction(StartArr, FinArr) {
+    // let num = StartArr[0];
+    for (let i = 0; i < StartArr.length; i++) {
+        alert(FinArr[i]); alert(StartArr[i]);
+        if (FinArr[i] != StartArr[i]) {
+            FinArr[i] = StartArr[i];
+            alert(FinArr[i]); alert(StartArr[i]);
+        } if  (FinArr[i] = StartArr[i]){FinArr[i] = undefined; }
+
+    }
+   
+    // y = y / 2;
+    // return "y= " + y + ", z= " + z;
+// }
+document.getElementById("demo").innerHTML =  FinArr;  // y= 1.5, z= 3
+</script>
+
+</body>
+</html>

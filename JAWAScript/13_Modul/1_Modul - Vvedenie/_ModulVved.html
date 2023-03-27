@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript _ModulVved</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<script type="module">		//	именно тут скрипт подключается как модуль	!!!
+			alert("type='module': " + this); 	// undefined (модульный скрипт подключается в последнюю очередь!)
+		</script>
+
+        <script src="_ModulVved.js"></script> 	<!--в первую очередь (так как расположен первьім) с загружаемого скрипта-->
+		
+		<script>
+			alert("html: " + this); 			// [object Window] во вторую очередь (так как расположен следующим)
+		</script>
+	</body>
+</html> 

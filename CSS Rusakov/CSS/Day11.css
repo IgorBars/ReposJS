@@ -1,0 +1,91 @@
+/* Урок 11*/
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+P {                     /* селектор элемента (P)*/
+    font-size: 130%
+}
+
+.gros13 {                 /* селектор класса (gros13)*/
+    font-size: 130%;
+    text-indent: 20px;
+}
+
+.gros15 {
+    font-size: 1.5em;
+    text-indent: 30px;
+}
+
+#title {                 /* селектор идентификатора (title)*/
+    color: brown;   /* Отличие СЕЛЕКТОРа от класса: */
+                        /* СЕЛЕКТОР идентификатора (title) может*/
+                       /* употребиться на странице       ТОЛЬКО 1 РАЗ*/
+                /* двух элементов с динаковым ID в коде быть не должно*/                      
+}
+
+P span {                /* контекстный селектор (P span) */
+    color: rgb(255, 0, 212);    /* только для тех элементов SPAN, которые внутри P) */
+    /* действует на любой глубине вложенности */
+}
+
+input[type="text"] {/* селектор парамметра (атрибут type со значением text) для всех элементов input */
+    color: rgb(248, 26, 26);   /* цвет вводимого текста */
+    cursor: pointer; /* видоизменяется курсор в поле формы */
+    height: 40px;
+    width: 400px;
+    border: 0,5px;
+}
+input[type="sabmit"] {/* селектор парамметра type="sabmit" только для второй формы */
+    height: 50px;
+    width: 300px;
+}
+input[type="text"]:focus {/* селектор парамметра type="sabmit" и псевдокласс focus */
+    border: 4px solid rgb(255, 23, 100);    /* видоизменяется рамка, когда курсор установлен в поле формы */
+}
+form > P {  /* дочерний селектор отношений form > P только для дочернего эл P */
+    font-size: 200%;
+}
+ul li:first-child {
+    color: rgb(240, 39, 3);
+}
+ul li:last-child {
+    color: #0c0;
+}
+ul li:nth-child(2){ /* псевдоэлемент выборки :nth-child(2) второго элемента li */
+    color: rgb(200, 3, 240);
+}
+
+table {
+    border: 2px solid #000; /* рамка толщ 2, сплошная, черная */
+    text-align: center;
+    width: 30%;
+}
+TD {
+    border: 1px solid #000;
+}
+TD:nth-child(2n){  /* псевдоэлемент выборки :nth-child(2n) по четным элементам (столбцам) */
+    color: #0c0;
+}
+TD:nth-child(2n+1){
+    color: rgb(226, 14, 14);
+}
+a {
+    color: rgb(226, 14, 14);
+    text-decoration-line: none;
+}
+a:hover{
+    color: rgb(53, 14, 226);
+    text-decoration-line: underline;
+}
+#table td .big:hover{ /* комбинируем селекторы */
+    font-size: 200%;
+    color: rgb(226, 14, 14);
+}
+
+DIV P {
+    text-justify: auto;
+    font-weight: bold;
+}
+
+

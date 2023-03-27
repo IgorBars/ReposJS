@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+    div {
+        padding: 3px;
+        text-align: center;
+        background-color: rgb(252, 255, 224);
+    }
+    .hour {
+        font-weight: bold;
+        color: rgb(250, 2, 2);
+    }
+    .min {
+        font-weight: bold;
+        color: rgb(2, 151, 15);
+    }
+    .sec {
+        font-weight: bold;
+        color:rgb(3, 45, 233)
+    }
+</style>
+</head>
+<body>
+    <div id="clock">
+        <span class="hour">HH</span>: <span class="min">MM</span>: <span class="sec">SS</span>
+    </div>
+    <div id="input">
+        <!-- клик по этой кнопке вызовет clockStart() -->
+        <input type="button" onclick="clockStart()" value="Старт">
+
+        <!-- клик по этой кнопке вызовет clockStop() -->
+        <input type="button" onclick="clockStop()" value="Стоп">
+    </div>
+    <script>
+
+
+        let timerId;
+
+        function update() { 
+            
+            let clock = document.getElementById("clock");
+            let date = new Date();
+
+            let hours = date.getHours();
+            if (hours < 10) hours = "0" + hours;
+            clock.children[0].innerHTML = hours;
+
+            let minutes = date.getMinutes();
+            if (minutes < 10) minutes = "0" + minutes;
+            clock.children[1].innerHTML = minutes;
+            
+            let getSeconds = date.getSeconds();
+            if (getSeconds < 10) getSeconds = "0" + getSeconds;
+            clock.children[2].innerHTML = getSeconds;
+        }
+
+        function clockStart() {
+            timerId = setInterval(update, 1000);
+            update();
+        }
+
+        function clockStop() {
+            clearInterval(timerId);
+        }
+
+        // clockStart();
+    </script>
+
+
+</body>
+</html>

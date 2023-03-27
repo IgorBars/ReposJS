@@ -1,0 +1,7 @@
+{
+  "[go]": {
+  },
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "blink",
+  "editor.detectIndentation": true
+}

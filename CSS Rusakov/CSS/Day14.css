@@ -1,0 +1,38 @@
+/* Урок 14 flow around blocks*/
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+/*  */
+.clear {    /* Отмена позиционирования */
+clear: both; /* скасовуємо дію float */
+}
+IMG {
+    float: left; /* расположение слева, левое обтекание */
+    margin-right: 20px;
+}
+UL {
+    list-style: none; /* убираем маркеры */
+    font-size: 150%; /* стиль наследуется в А */
+    margin: 0;
+    padding: 0;
+}
+UL li {
+    float: left; /* расположение слева, левое обтекание */
+    background-color: rgba(59, 248, 11, 0.452);
+    color: rgba(28, 5, 233, 0.794)
+}
+UL li A { /* отступы для элементов меню */
+    padding: 5px 10px;
+}
+UL li A:hover { /* изменение при наведении курсора */
+    background-color: rgba(243, 86, 24, 0.863);
+    color: rgb(247, 241, 241)
+}
+DIV.right {
+    background-color: #ccc;
+    float: right;   /* расположение справа, правое обтекание */
+    height: 150px;
+    width: 300px;
+}
+

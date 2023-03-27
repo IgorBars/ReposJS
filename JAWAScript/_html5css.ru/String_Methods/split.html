@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--Преобразование строки в массив-->
+<p>Click "Try it" to display the first array element, after a string split.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = "a,b,c,d,e,f";
+    var arr = str.split(",");                           //  [a,b,c,d,e,f]
+    document.getElementById("demo").innerHTML = arr[0]; // a
+}
+
+//Если разделитель опущен, возвращаемый массив будет содержать всю строку в index [0].
+
+//Если разделитель " ", возвращаемый массив будет массивом слов
+//"ab cd ef" => [ab, cd, ef]
+
+
+// если в исходной строке разделители запятьіе - ставим разделитель запятую ","    str.split(",")
+</script>
+
+</body>
+</html>

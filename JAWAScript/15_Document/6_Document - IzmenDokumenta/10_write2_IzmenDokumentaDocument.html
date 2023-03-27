@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10_write2_IzmenDokumentaDocument  
+      </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+      <body>
+        <p>Через одну секунду содержимое этой страницы будет заменено...</p>
+        <script>
+          // document.write через 3 секунду
+          // вызов происходит после того, как страница загрузится, поэтому метод затирает содержимое
+          setTimeout(() => document.write('<b>...Этим.</b>'), 3000);
+        </script>
+            
+            <script src="10_write2_IzmenDokumentaDocument.js"></script>
+      </body>
+</html>

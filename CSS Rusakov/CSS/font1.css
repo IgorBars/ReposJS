@@ -1,0 +1,41 @@
+/* CSS-файл для "CSS Day9 font.html"*/
+
+@font-face {
+    font-family: GunnyRewritten;
+    
+    src: url("../vscode_font/gnyrwn971.woff2") format(woff2), url("../vscode_font/GunnyRewritten.woff") format(woff);
+    /* указание форматов woff и woff2 достаточно для всех современных браузеров */
+}
+
+h1.gunny {
+    font-family: GunnyRewritten;
+    text-align: center;                                             /* контроль присоединения данного css*/
+}
+
+
+
+
+h1 {
+    font-family: Georgia;
+    text-align: center;
+}
+h3 {
+    font-family: sans-serif;
+    text-align: left;
+    font-weight: lighter; /* утоньшается начертание*/
+    line-height: 300%; /* отступ между строками */
+}
+p {
+    line-height: 90%; /* отступ между строками */
+    text-indent: 20px; /* отступ красной строки */
+}
+.decor {
+    text-decoration-line: underline; /* подчеркивание */
+    text-indent: 0px; /* убираем в классе отступ красной строки */
+}
+.strike {
+    text-decoration-line: line-through; /* зачеркивание */
+}
+.shadow {
+    text-shadow: 5px 2px 5px #555;
+}

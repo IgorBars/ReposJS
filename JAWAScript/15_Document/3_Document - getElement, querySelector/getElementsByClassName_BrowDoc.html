@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form name="my-form">
+        <div class="article">Article</div>
+        <div class="long article">Long article</div>
+      </form>
+      
+      <script>
+        // ищем по имени атрибута
+        let form = document.getElementsByName('my-form')[0];
+      
+        // ищем по классу внутри form
+        let articles = form.getElementsByClassName('article');
+        alert(articles.length); // 2, находим два элемента с классом article
+        for(let article of articles)
+        article.style.background = 'blue';
+      </script>
+</body>
+</html>

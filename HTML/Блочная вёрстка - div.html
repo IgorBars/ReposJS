@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Блочная вёрстка</title>
+    <style>
+    H1 { 
+     font-size: 150%; 
+     font-family: Verdana, Arial, Helvetica, sans-serif; 
+     color: #2727a2; 
+    }
+    </style> <!--Свойства CSS для H1-->
+  </head> 
+  <body>
+ 
+    <div id="container" style="width:1030px">
+ 
+      <div id="header" style="background-color:#A3FFC2; height:35px;">
+        <h1 style="margin-bottom:0; text-align:center;">Верхняя часть сайта</h1><!--margin-bottom -Отступ от нижнего края элемента-->
+      </div>
+ 
+      <div id="menu" style="background-color:#FFFFB8;height:412px;width:200px;float:left;">
+        <!--float:left -Выравнивает элемент по левому краю, а все остальные элементы, вроде текста, обтекают его по правой стороне.-->
+        <b>Меню</b><br>
+        Пункт 1<br>
+        Пункт 2<br>
+        Пункт 3</div>
+ 
+      <div id="content" style="background-color: rgb(245, 228, 215);height:412px;width:830px;float:left;">
+        <h3 style="text-align:center;">Место для контента</h3>
+      </div>
+ 
+      <div id="footer" style="background-color:#A3FFC2;clear:both;text-align:center;">
+        <!--clear:both -Отменяет обтекание элемента одновременно с правого и левого края-->
+        Copyright © 2011 www.puzzleweb.ru
+      </div>
+ 
+    </div>
+ 
+</body>
+</html> 

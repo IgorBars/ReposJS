@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript Ex1_3_concat_ArrayBufferBinDate
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="">
+	</head>
+	<body>
+        <script src="https://ru.js.cx/test/libs.js"></script>
+	
+        <script>
+
+            function concat(arrays) {
+              // ...ваш код...
+              // находим общую длину переданных массивов
+              let totalLength = arrays.reduce((totalLength, arr) => totalLength + arr.length, 0);
+
+              let resultUint8 = new Uint8Array(totalLength); // result - типизированньій 1-Байтньій массив
+
+              // if (!arrays.length) return result;
+
+              // добавляем каждый из массивов в result
+              // следующий массив копируется сразу после предыдущего
+              let offset = 0;
+              for(let array of arrays) {
+                resultUint8.set(array, offset);    // offset: 0, 3, 6
+                offset += array.length;
+              }
+
+              return resultUint8;
+            }
+            
+            let chunks = [
+              new Uint8Array([0, 1, 2]),
+              new Uint8Array([3, 4, 5]),
+              new Uint8Array([6, 7, 8])
+            ];
+            
+            console.log(Array.from(concat(chunks))); // 0, 1, 2, 3, 4, 5, 6, 7, 8
+            
+            console.log(concat(chunks).constructor.name); // Uint8Array
+            
+        </script>
+
+        <script src="Ex1_concat_ArrayBufferBinDate.js"></script>
+	</body>
+</html>

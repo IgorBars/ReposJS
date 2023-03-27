@@ -1,0 +1,50 @@
+/* Урок 13bg */
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+
+body {
+    background: url("../vscode_img/bg.jpg");/* no-repeat - фон не множится*/
+    margin: 0;    /* repeat-x - фон множится по горизонтали*/   
+    padding: 0;     /* repeat-y - фон множится по вертикали*/
+    background-repeat: repeat;   /* repeat - фон множится по умолчанию*/
+}                       
+.red {
+    background-color: #c00;
+    height: 100px;
+    margin: 40px;   /* блок смещается на величину margin */
+    padding: 40px;    /* размеры блока увеличиваются на величину padding */
+    width: 300px;
+}    
+.bg_blue {
+    background: url("../vscode_img/bg.jpg") no-repeat 25% 15% rgb(30, 125, 214);
+    /* свойства атрибута background можно писать в одну строку*/
+    /*25% - отступ слева, 15% - отступ сверху*/
+    /*rgb(30, 125, 214) - заливка за пределами одиночного фонового рисунка*/
+    /*transparent - прозрачность за пределами одиночного фонового рисункао*/
+    border: 2px solid salmon;   /* без solid рамку не видно! */
+    height: 300px;
+    width: 300px;
+}
+.bg_blue:last-child {
+    background-position: center center; /*выравнивание отступов по центру*/
+    background-position: bottom right; /*выравнивание отступов по нижнему и правому краю*/
+}
+.bg_sise {
+    background: url("../vscode_img/bg.jpg") no-repeat rgb(30, 125, 214);
+    background-size: 80%; /*размер фонового рисунка в % по отношению к блоку*/
+    background-size: contain; /*размер фонового рисунка по max стороне*/
+    background-size: cover; /*размер фонового рисунка заполняет полностью блок с сохранением пропорций */
+                            /*лишнее за пределами блока - не показывается*/
+    border: 2px solid salmon;
+    height: 300px;
+    width: 300px;
+}
+.bg_mult {
+    background: url("../vscode_img/bg.jpg") no-repeat top left, url("../vscode_ico/favicon.ico");
+    /*через запятую ссылки на другие фоновые рисунки*/
+    border: 2px solid rgb(114, 196, 250);
+    height: 500px;
+    width: 400px;
+}

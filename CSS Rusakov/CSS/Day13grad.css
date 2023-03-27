@@ -1,0 +1,24 @@
+/* Урок 13grad */
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+div {
+    height: 100px;
+    width: 200px;
+}
+.lg {
+    background: linear-gradient(135deg, #c00, #0c0);
+}
+.lg_2 {
+    background: linear-gradient(135deg, #c00 30%, #00c, #0c0);
+}
+.rg {
+    background: radial-gradient(#c00 30%, #0c0);    /* начало в центре */
+    /* at center center - равнозначная запись с началом в центре */
+}
+.rg_left {
+    background: radial-gradient(at left, #c00, #0c0);
+    /* смещение начала влево. at - обязательный элемент */
+    /* at left top - смещение начала влево вверх */
+}

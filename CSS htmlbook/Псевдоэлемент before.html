@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Псевдоэлемент before</title>
+  <style>
+   UL   {
+            padding-left: 0; /* Убираем отступ слева */
+            list-style-type: none; /* Прячем маркеры списка */
+        }
+   LI:before {
+                content: "\20aa "; /* Добавляем перед элементом списка символ в юникоде */
+            }
+  </style>
+ </head>
+ <body>
+  <ul>
+   <li> Чебурашка</li>
+   <li> Крокодил Гена</li>
+   <li> Шапокляк</li>
+   <li> Крыса Лариса</li>
+  </ul>
+ </body>
+</html>

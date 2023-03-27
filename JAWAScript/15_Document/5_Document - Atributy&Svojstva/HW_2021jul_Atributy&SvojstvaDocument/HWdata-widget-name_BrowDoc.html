@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    
+<!--Напишите код для выбора элемента с атрибутом data-widget-name из документа
+     и прочитайте его значение.-->
+
+      <body>
+        <div data-widget-name="menu">Choose the genre</div>
+
+        <script>
+          
+          let elem = document.querySelector('[data-widget-name]');
+          alert(elem.dataset.widgetName); //menu
+    // или так
+          alert(elem.getAttribute('data-widget-name')); //menu
+
+          //добавим еще атрибут:
+          elem.style.color = 'orange';
+          alert(elem.outerHTML); //<div data-widget-name="menu" style="color: orange;">Choose the genre</div>
+        </script>
+      </body>
+</html>

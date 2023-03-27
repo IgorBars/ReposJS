@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript Ex1_showPrompt_submitForms
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="Ex1_showPrompt_submitForms.css">
+	</head>
+	<body>
+
+    <div>
+      <h2>Кликните на кнопку ниже</h2>
+      <button id="but" onclick="show()">Показать форму</button>
+    </div>
+
+    <div id="prompt-form-container"></div>
+      <form id="prompt-form">
+        <div id="prompt-message">Введите что-нибудь...
+          <br>Пожалуйста..
+        </div>
+        <input name="text" type="text">
+        <input type="submit" value="Ok">
+        <input type="button" name="cancel" value="Отмена">
+      </form>
+    </div>
+    
+    <script src="Ex1_showPrompt_submitForms.js"></script>
+	</body>
+</html>

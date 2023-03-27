@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> index
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+
+        <button id="buttonOp">Нажми меня - открой iframe!</button>
+        <button id="buttonPost">Сообщение в iframe</button>
+        
+        <script>
+            let iframe = document.getElementById('iframe');
+            let buttonOp = document.getElementById('buttonOp');
+            let buttonPost = document.getElementById('buttonPost');
+
+            buttonOp.onclick = () => {
+                iframe = document.createElement("iframe");
+                iframe.src = "iframe.html";                              // откроем в iframe єтот html-файл
+                iframe.id = iframe;
+                document.body.append(iframe);
+                buttonOp.onclick = null;                                 // кнопка buttonOp сработает только раз
+            };
+
+            buttonPost.onclick = () => {
+                iframe.contentWindow.postMessage(`${window.location}`, "*");  // сообщение в iframe
+            };
+
+            window.addEventListener("message", function(event) {          // обработчик ответа от iframe ("message" - зарезервированное собьітие)
+                alert(`Получено от iframe: ${event.data}`);
+            }); 
+        </script>
+        
+    </body>
+</html>

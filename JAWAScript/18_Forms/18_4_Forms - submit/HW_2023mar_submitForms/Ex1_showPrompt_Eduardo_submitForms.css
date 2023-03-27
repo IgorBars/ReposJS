@@ -1,0 +1,52 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#prompt-form {                /* собственно форма*/
+  display: inline-block;
+  padding: 5px 5px 5px 70px;
+  width: 200px;
+  border: 1px solid black;
+  background: white url(https://en.js.cx/clipart/prompt.png) no-repeat left 5px;
+  vertical-align: middle;
+}
+
+#prompt-form-container {    /* центровочньій контейнер  для prompt-form*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;                /* скрьівает себя (container-маску) и form(без z-index) внутри него */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* https://learn.javascript.ru/css-center*/    /* центровочньій вспомогательньій контейнер для точной центровки prompt-form*/
+#prompt-form-container:before { /* :before, display: inline-block, height: 100%; vertical-align: middle; - верт вьіравгнивание блока внутри */
+  display: inline-block;
+  height: 100%;
+  content: '';
+  vertical-align: middle;
+}
+
+#cover-div {                    /* модальное окно - ширма */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;                /* прикрьівает все, кроме container(z-index: 9999)*/
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
+}
+
+#prompt-form input[name="text"] { /* просто компоновка по input name="text"*/
+  display: block;
+  margin: 5px;
+  width: 180px;
+}

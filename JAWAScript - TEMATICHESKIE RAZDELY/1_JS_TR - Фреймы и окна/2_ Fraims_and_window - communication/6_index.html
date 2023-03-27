@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  Отправка сообщений postMessage
+  <form id="form">
+    <input type="text" placeholder="Введите сообщение" name="message">
+    <input type="submit" value="Нажмите для отправки">
+  </form>
+
+  <iframe src="6_iframe.html" id="iframe" style="display:block;height:60px"></iframe>
+
+  <script>
+    let form = document.getElementById('form');
+    let inputMessage = form.elements.message;
+    let iframe = document.getElementById('iframe');
+    form.onsubmit = function() {
+      // iframe.contentWindow.postMessage(this.message.value, '*');
+      iframe.contentWindow.postMessage(inputMessage.value, '*');
+      return false;
+    };
+  </script>
+
+</body>
+</html>

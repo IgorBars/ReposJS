@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div>Пользователи:</div>
+  <ul>
+    <li>Джон</li>
+    <li>Пит</li>
+  </ul>
+  <script>
+      let div = document.body.firstElementChild;
+      let ul  = div.nextElementSibling;
+      let li  = ul.lastElementChild
+
+      alert(document.body.children[0]);         // div
+      alert(document.body.firstElementChild);   // div
+      alert(document.body.children[1]);         // ul
+      alert(document.body.children[1].firstElementChild);   // Джон
+      alert(document.body.children[1].lastElementChild);    // Пит
+  </script>
+</body>
+</html>

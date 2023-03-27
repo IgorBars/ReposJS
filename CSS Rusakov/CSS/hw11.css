@@ -1,0 +1,57 @@
+/* Home work 11*/
+
+@import url("");
+@import url("");
+
+/* Exercise 1*/
+#color111 {
+    color: #0c0;
+}
+a#color222 {
+    color: rgb(54, 0, 204);
+}
+li a#color333 {
+    color: rgb(252, 6, 6);
+}
+ul li a#color444 {
+    color: rgb(244, 6, 252);
+}
+
+#color1 {
+    color: #0c0;
+}
+p#color2 {
+    color: rgb(54, 0, 204);
+}
+li p#color3 {
+    color: rgb(252, 6, 6);
+    text-decoration-line: underline;
+}
+ul li p#color4 {
+    color: rgb(244, 6, 252);
+}
+/* Exercise 2*/
+a:hover {
+    font-size: 200%;
+}
+/* Exercise 3*/
+label[for="formInp"]
+{
+    font-size:150%;
+    color: rgba(145, 2, 2, 0.897);
+}
+input[type="sabmit"]
+{
+    color: rgba(145, 2, 2, 0.897);
+    font-size: 150%;
+    height: 30px;
+    width: 200px;
+    
+}
+input:hover 
+{
+    border: 5px solid rgb(84, 76, 78);
+    color: rgb(230, 4, 4);
+}
+.red {color: rgb(230, 4, 4);}
+.green {color: #0c0;}

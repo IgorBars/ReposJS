@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript Ex3_ball2_BrowserEventsEvents
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            #field {
+              width: 200px;
+              height: 150px;
+              border: 10px solid black;
+              background-color: #00FF00;
+              overflow: hidden;
+              position: relative;
+              left: 40px;
+              top: 40px;
+            }
+            #field1 {
+              width: 300px;
+              height: 250px;
+              border: 10px solid rgba(146, 247, 186, 0.967);
+              background-color: #d1f7d1;
+              overflow: hidden;
+              position: relative;
+            }
+            #ball {
+                position: absolute;
+                left: 0; /* по отношению к ближайшему расположенному предку (поле) */
+                top: 0;
+                transition: 0.5s all; /* CSS-анимация для значений left/top делает передвижение мяча плавным */
+            }
+        </style>
+	</head>
+	<body style="height:2000px">
+        Нажмите на поле для перемещения мяча.
+        <br> Светлое поле тоже активно.
+        <br> Мяч не должен выходить за границы поля.
+        <div id="field1">
+            <div id="field">
+                <img src="https://ru.js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+            </div>
+        </div>
+        <script src="Ex3_ball2_BrowserEventsEvents.js"></script>
+	</body>
+</html>

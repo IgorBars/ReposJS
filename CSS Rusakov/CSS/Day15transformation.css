@@ -1,0 +1,37 @@
+/* Урок Day15 transformation*/
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+/*  */
+
+DIV {
+    background: linear-gradient(180deg, #c00, #0c0);
+    height: 70px;
+    width: 150px;
+}
+.t_1 {
+transform: rotate(20deg); /* трансформация поворота */
+transform-origin: center bo;   /* выбор точки отсчета трансформации */
+margin-top: 50px;
+}
+.t_2 {
+transform: scale(0.8, 1.5);   /* трансформация сжатия-растягивания */
+margin-top: 50px;
+}
+.t_3 {
+transform: scale(3, 0.7) rotate(60deg);
+margin-top: 50px;
+}
+.t_4 {
+    transform: skewX(20deg);    /* трансформация наклона 3D */
+    margin-top: 40px;
+}
+.t_5 {
+    transition-duration: 3s;
+    margin-top: 70px;
+}
+.t_5:hover {
+    transform: rotate(30deg);
+}
+

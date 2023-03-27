@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8_order-state_Atributy&SvojstvaDocument 
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+    <body>
+          <style>
+            /* стили зависят от пользовательского атрибута "order-state" */
+            .order[order-state="new"] {      /*для ел. класса order и атрибутом order-state="new"*/
+              color: green;
+            }
+          
+            .order[order-state="pending"] {
+              color: blue;
+            }
+          
+            .order[order-state="canceled"] {
+              color: red;
+            }
+          </style>
+          
+          <div class="order" order-state="new">
+            A new order.
+          </div>
+          
+          <div class="order" order-state="pending">
+            A pending order.
+          </div>
+          
+          <div class="order" order-state="canceled">
+            A canceled order.
+          </div>
+
+          <script src="8_order-state_Atributy&SvojstvaDocument.js"></script>
+      </body>
+</html>

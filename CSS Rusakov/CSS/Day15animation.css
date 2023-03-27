@@ -1,0 +1,54 @@
+/* Урок Day15 animation*/
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+/*  */
+a {
+    color: rgb(54, 0, 204);
+    font-size: 150%;
+    transition-property: color; /* какое свойство анимируем */
+    transition-duration: 1s;    /* продолжительность анимации */
+}
+a:hover {
+    color: rgb(251, 255, 6);
+}
+.block {
+    background-color: lawngreen;
+    height: 30px;
+    width: 100px;
+    transition-property: width; /* плавно меняется только одно св-во */
+    /*transition-property: background-color;*//* неуказанное св-во меняется скачком */
+    transition-duration: 2s;
+    /*transition-timing-function: steps(3);*/ /*св-во меняется скачкaми*/
+}
+.block:hover {
+    width: 300px;
+    background-color: rgb(252, 0, 0);
+}
+.block_frames {   /* анимация при вхождении на страницу */
+    animation-name: bc;
+    animation-duration: 3s;
+    background-color: rgb(174, 137, 137);
+    height: 50px;
+    width: 100px;
+}
+/*.block_frames:hover {  или при вхождении на стр, или при наведении
+    animation-name: bc;
+    animation-duration: 3s;
+}*/
+@keyframes bc { /* название анимации например bc */
+    0% {
+        background-color: rgb(233, 59, 59);
+    }
+    30% {
+        background-color: rgb(71, 59, 233);
+    }
+    60% {
+        background-color: rgb(230, 233, 59);
+    }
+    100% {
+        background-color: rgb(233, 59, 204);
+    } 
+
+}

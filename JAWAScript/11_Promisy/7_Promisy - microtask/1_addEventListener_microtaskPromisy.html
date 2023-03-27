@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript _PromisyMicrozadachy</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+        <script>
+			let promise = Promise.reject(new Error("Ошибка в промисе!"));
+
+			promise.catch( err => {alert("Ошибка поймана!"); } );
+
+			// не запустится, ошибка обработана
+			window.addEventListener('unhandledrejection', event => {
+			alert(event.reason);
+			});
+		</script>
+	</body>
+</html> 

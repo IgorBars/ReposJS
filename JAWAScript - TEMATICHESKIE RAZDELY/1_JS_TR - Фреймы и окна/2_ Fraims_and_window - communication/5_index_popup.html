@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 5_index_popup
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+
+      <button id="button" data-tooltip="but">Открьіть popup</button>
+
+      <form id="form">
+        <input type="text" placeholder="Введите сообщение" name="message">
+        <input type="submit" value="Отправить сообщение">
+      </form>
+
+      <script>
+        let button = document.getElementById('button');
+        let form = document.getElementById('form');
+        let inputMessage = form.elements.message;
+        let newWindow;
+
+        button.onclick = () => {
+          newWindow = window.open('5_popup.html', "hello", "width=600,height=300,left=150,top=150"); // 5_popup.html - соседний файл для открьітия в попап
+        };
+        
+
+        form.onsubmit = function() {
+          newWindow.postMessage(inputMessage.value, '*');
+          return false;
+        };
+
+        window.addEventListener("message", function(event) {  // обработчик ответа от popup("message" - зарезервированное собьітие)
+                alert(`Получено от popup: ${event.data}`);
+            }); 
+      </script>
+      
+      
+      <!-- от кнопки можно открьіть страницу любого домена -->
+      <!-- но на странице чужого домена не разместить скрипт с обработчиком собьітия "message" для запроса postMessage -->
+      <!-- (политика единого источника) -->
+      <!-- Поєтому работаем со своими html-файлами ( в файле 5_index открьіваем попап файла 5_popup) -->
+    </body>
+</html>
+
+
+
+
+
+
+
+
+

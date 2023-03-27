@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript 4_not_crossorigin_onloadonerrLoadDoc
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="">
+        <style>
+        </style>
+	</head>
+	<body>
+
+    <script>
+      window.onerror = function(message, url, line, col, errorObj) {
+        alert(`${message}\n${url}, ${line}:${col}`);
+      };
+    </script>
+    <script src="https://cors.javascript.info/article/onload-onerror/crossorigin/error.js"></script>
+
+    <script src="4_not_crossorigin_onloadonerrLoadDoc.js"></script>
+	</body>
+</html>

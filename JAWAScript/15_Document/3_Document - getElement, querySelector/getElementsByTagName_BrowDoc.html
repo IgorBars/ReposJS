@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <table id="table">
+        <tr>
+          <td>Ваш возраст:</td>
+      
+          <td>
+            <label>
+              <input type="radio" name="age" value="young" checked> младше 18
+            </label>
+            <label>
+              <input type="radio" name="age" value="mature"> от 18 до 50
+            </label>
+            <label>
+              <input type="radio" name="age" value="senior"> старше 60
+            </label>
+          </td>
+        </tr>
+      </table>
+      
+      <script>
+        // let table = document.querySelector("table");// по по названию тега
+        // CSS-селектор по классу chapter1 '.chapter1'
+        let table = document.querySelector("#table");// по id
+        // alert(table.firstChild);//[object Text]
+        // alert(table.firstChild.nextSibling);//[object HTMLTableSectionElement] (<=tbody)
+        // alert(table.firstChild.nextSibling.firstChild);//[object HTMLTableRowElement] (<=tr)
+        // alert(table.firstChild.nextSibling.firstChild.firstChild);//[object Text]
+        // alert(table.firstChild.nextSibling.firstChild.firstChild.nextSibling);//[object HTMLTableCellElement] (<=td)
+        
+          alert(table.firstElementChild); //[object HTMLTableSectionElement] =tbody
+          // alert(table.firstElementChild.nextElementSibling);//null
+          alert(table.firstElementChild.firstElementChild);//[object HTMLTableRowElement] =tr
+          alert(table.firstElementChild.firstElementChild.firstElementChild);//[object HTMLTableCellElement] =td
+
+        let inputs = table.getElementsByTagName('input');
+        inputs[1].checked = true;                  // можно изменить врукопашную
+        for (let input of inputs) {
+          alert( input.value + ': ' + input.checked ); 
+        }
+
+        
+      </script>
+</body>
+</html>

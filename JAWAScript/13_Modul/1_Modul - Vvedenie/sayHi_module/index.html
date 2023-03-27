@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript index</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+    <div></div>
+    <script>
+      // async function load() {
+      //   let say = await import('./say.js');
+      //   say.hi("Jon"); // Привет!
+      //   say.bye("Tom"); // Пока!
+      //   say.default(); // Модуль загружен (экспорт по умолчанию)!
+      // }
+    </script>
+
+        <script type="module">
+            import {sayHi} from './say.js';
+            document.body.innerHTML = sayHi('John');
+
+            import {Hi} from './say.js';
+            Hi('Alex');
+
+            import {Bye} from './say.js';sayHiduble
+            Bye('Tom');
+
+            import {sayHiduble} from './saysay.js';
+            sayHiduble("John");
+        </script> 
+	</body>
+</html> 

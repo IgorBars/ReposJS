@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>Avoid using new Array().</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "";
+var points = new Array(4);
+for(let i=0; i< points.length; i++) {
+	text += points[i] + " " + i + "<br>"
+}
+
+document.getElementById("demo").innerHTML = text;    
+</script>
+
+</body>
+</html>

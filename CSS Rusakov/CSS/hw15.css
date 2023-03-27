@@ -1,0 +1,64 @@
+/* HWork Day15 */
+
+/* @import url("align.css");
+@import url("color.css");*/
+
+/*     float: left; */
+.simpl {
+        background-color: lawngreen;
+        border: 10px solid rgb(245, 14, 14);
+        float: left;
+        height: 70px;
+        margin-left: 30px; 
+        transition-property: background-color;
+        transition-duration: 1.5s;
+        width: 150px;
+}
+.simpl:hover {
+    border-color: rgb(214, 185, 238);
+    background-color: rgb(252, 59, 0);
+
+}
+
+.trf_1 img {
+    float: left;
+    margin-left: 30px;
+    transform: rotate(25deg);
+    transition-duration: 2s;
+    width: 240px;
+}
+.trf_1 img:hover {
+    transform: rotate(-25deg);
+}
+
+.trf_2 img {
+    float: left;
+    margin-left: 60px;
+    transform: scaleX(1.4);
+    transition-duration: 2s;
+    width: 180px;
+}
+.trf_2 img:hover {
+    transform: scaleX(0.7);
+} 
+
+.trf_3 img {
+    float: left;
+    margin-left: 80px;
+    transform: skew(30deg);
+    transition-duration: 3s;
+    width: 210px;
+}
+.trf_3 img:hover {
+    transform: skew(-30deg);
+}
+
+.trf_4 img {
+    margin-top: 30px;   
+    transform: scaleY(0.7);
+    transition-duration: 3s;
+    width: 210px;
+}
+.trf_4 img:hover {
+    transform: scaleY(1.3);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <ul>
+        <li>ЧАСТЬ 1
+            <ul>
+                <li>Глава 1
+                    <ul>
+                        <li>Глава 0.1
+                            <ul>
+                                <li>Глава 0.01</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li</li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>ЧАСТЬ 2
+            <ul>
+                <li>Глава 1</li>
+                <li</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        for(let li of document.querySelectorAll("li")) {
+          // получаем название(с (пробелами) и переводом строки, вьізьівающими ступеньку) из текстового узла
+          let title = li.firstChild.data;
+          title = title.trim(); // удаляем лишние пробелы и перевод строки c конца строки
+          alert(title + ": вложений li:  " + li.getElementsByTagName("li").length);
+        }
+        alert(lis.length);
+    </script>
+</body>
+</html>

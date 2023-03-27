@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JScript 5_toggler2_DelegationEvents
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    
+    <button data-toggle-id="subscribe-mail"><!--data-toggle-id - поисковьій атрибут для хендлера показа/скрьітия-->
+        Показать форму подписки
+    </button>
+      
+    <form id="subscribe-mail" hidden><!--значение id !!!. Атрибут hidden=true будет изменен-->
+        Ваша почта: <input type="email">
+    </form>
+    <p></p>
+    <button data-toggle-id="subscribe-reg">
+        Показать форму регистрации
+    </button>
+      
+    <form id="subscribe-reg" hidden>
+        Ваше Имя: <input type="text">
+    </form>
+
+    <script src="5_toggler2_DelegationEvents.js"></script>
+  </body>
+</html> 

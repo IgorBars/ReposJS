@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript 2_DOMContentLoaded_script_PageLoadDoc
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="">
+        <style>
+        </style>
+	</head>
+	<body>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        alert("DOM готов! (все скрипты выполнены)");
+      });
+    </script>
+    
+    <script>
+      let i = 0;
+      let start = Date.now();
+      function count() {
+        // делаем тяжёлую работу 3 сек
+        for (let j = 0; j < 1e9; j++) {
+          i++;
+        }
+        alert("Done in " + (Date.now() - start) + 'ms');
+      }
+      count();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script><!--Библиотека--> <!--блокирует DOMContentLoaded-->
+    
+    <script>                                                                                   // блокирует DOMContentLoaded //
+      alert("Библиотека загружена, встроенный скрипт выполнен");
+    </script>
+
+
+    <script src="2_DOMContentLoaded_script_PageLoadDoc.js"></script>
+	</body>
+</html>

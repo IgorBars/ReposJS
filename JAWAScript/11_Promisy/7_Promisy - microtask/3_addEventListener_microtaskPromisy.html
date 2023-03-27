@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JScript Win2_PromisyMicrozadachy</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+        <script>
+            "use strict";globalThis.__codeBoxId = "h2egh8v0rj";
+
+			let promise = Promise.reject(new Error("Ошибка в промисе!"));
+
+			window.addEventListener('unhandledrejection', event => alert(event.reason));	// Error: Ошибка в промисе!
+
+			// нет обработчика ошибок, но генерируется событие unhandledrejection,
+			// которое можно отследить с помощью window.addEventListener
+        </script>
+	</body>
+</html> 

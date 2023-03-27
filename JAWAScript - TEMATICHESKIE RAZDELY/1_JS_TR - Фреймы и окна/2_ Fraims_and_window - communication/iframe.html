@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> iframe
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+
+        Iframe
+        <button id="button">Сообщение в window.parent</button>
+        <script>
+            // if (top != window) { // если окно открыто во фрейме, оно автоматически располагает себя сверху (борьба с мошенниками)
+            //     top.location = window.location;     // (заменяем в самом внещнем родителе ссьілку на фреймовую) 
+            // }
+            let button = document.getElementById('button');
+            window.addEventListener("message", function(event) {
+                alert(`Получено: ${event.data} от ${event.origin}`);
+            });
+            button.onclick = () => {
+                window.parent.postMessage(`${window.location}`, "*"); // сообщение в родительское окно
+            };
+        </script>
+        
+    </body>
+</html>
