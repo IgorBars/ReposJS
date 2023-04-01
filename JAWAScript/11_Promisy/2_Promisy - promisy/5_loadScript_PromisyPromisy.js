@@ -46,7 +46,7 @@ promise.then(script => alert(script));  // [object HTMLScriptElement]           
 promise.then(script => alert(`Ещё один обработчик. Адрес загрузки: ${script.src}`));
 
 
-// По сути в promise хранится об'ьект, переданньій колбеком resolve и содержащий загруженньій скрипт (HTMLScriptElement) и адрес загрузки
+// По сути в promise хранится об'ьект, переданньій колбеком resolve и содержащий загруженньій скрипт (createElement => HTMLScriptElement)
 // или об'ьект ошибки, созданной и переданной колбеком промимса   reject
 alert("End");
 

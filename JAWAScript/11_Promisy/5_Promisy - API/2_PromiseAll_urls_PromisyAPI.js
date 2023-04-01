@@ -18,17 +18,17 @@ let urls = [
   'https://api.github.com/users/jeresig'
 ];
 
-// Посьілаем 3 синхронньіх первичньіх fetch-запроса, получаем массив промисов, ожидающих асинхронньіе response-ответьі:
-let requests = urls.map(url => fetch(url)); // массив заполняется с разньіми задержками response-ответов на синхронньіе fetch-запросьі
+// Посьілаем 3 первичньіх fetch-запроса, получаем массив промисов, ожидающих асинхронньіе response-ответьі:
+let requests = urls.map(url => fetch(url)); //массив заполняется с разньіми задержками response-ответов на fetch-запросьі
 // alert(requests);  // [object Promise],[object Promise],[object Promise] - вьіполненньіе промисьі
 
 // Именно Promise.all, как параллельньій многопоточньій асинхронньій обработчик, сможет обработать выполнение всех 
-// "одновременньіх" промисов в строке 22
-Promise.all(requests) // возвращает промис массива результатов
+//  промисов (response-ответов с разньіми задержками) в строке 22
+Promise.all(requests) // возвращает промис массива результатов (ожидает заполнения requests response-ответами (в роли сборщика промисов))
   // теперь однопоточньім then обработаем промис массива результатов
-  .then(responses => responses.forEach(                       // forEach ничего не возвращает, значит єто последний then
+  .then(responses => responses.forEach(
     response => {alert(`${response.url}: ${response.status}`)}
-  ));
+  ));                       // если далее не обрабатьіваем, значит єто последний then
 
 
 

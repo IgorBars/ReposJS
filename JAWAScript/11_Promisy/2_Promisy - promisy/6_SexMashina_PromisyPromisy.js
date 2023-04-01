@@ -107,8 +107,12 @@ fetch("http://jsonplaceholder.typicode.com/posts")
 разбираться, как с ними работать.
 */
 'use strict';
-alert("Start 6_SexMashina_PromisyPromisy");
+alert("Start 6_SexMashina_PromisyPromisy");              // РЕЗУЛЬТАТ В CONSOLE.LOG
 
+fetch("http://jsonplaceholder.typicode.com/posts")
+  .then(response => response.json())
+  .then(data => console.log(data)) 
+  // data- огромный массив постов [{..}, {..}, {..}, ..]
 
 alert("End");
 

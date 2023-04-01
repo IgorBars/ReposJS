@@ -1,16 +1,16 @@
 /* JawaScript - 2_loadScriptCollback1_CollbackPromisy  - асинхронное программирование с использованием колбэков.
+ !!! loadScript (рабочая "затяжная" функция с колбеком callback) загружает скрипт с интернета
 */
 'use strict';
 
 alert("Start 2_loadScriptCollback1_CollbackPromisy");
-// !!! loadScript загружает скрипт с интернета!
 
-//рабочая "затяжная" функция с колбеком callback
+
 
 function loadScript(src, callback) {
   let script = document.createElement('script');
   script.src = src;
-  script.onload = () => callback(script);         // (тема: https://learn.javascript.ru/onload-onerror)
+  script.onload = () => callback(script);
   document.head.append(script);
 }
 

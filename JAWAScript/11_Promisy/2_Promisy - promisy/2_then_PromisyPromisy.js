@@ -8,13 +8,13 @@ setTimeout             => resolve,reject => Promise =>.then =>      ПОЛУЧА
 
 Объект Promise служит связующим звеном между исполнителем («создающим» кодом или «певцом») и 
 функциями-потребителями («фанатами»), которые получат либо результат, либо ошибку. 
-Функции-потребители могут быть зарегистрированы (подписаны) с помощью методов .then и .catch.
+Функции-потребители могут быть зарегистрированы (подписаны) с помощью методов ожидания .then и .catch.
 
 Синтаксис:
 
 promise.then(
-  function(result) {  ...обработает успешное выполнение...  },
-  function(error) { ... обработает ошибку ... }
+  function(result) { result => ...обработает успешное выполнение...  },
+  function(error) { error =>... обработает ошибку ... }
 );
 
 Первый аргумент метода-обработчика .then – функция, которая выполняется, когда промис переходит в состояние «выполнен успешно», 
@@ -33,9 +33,9 @@ let promise = new Promise(function(resolve, reject) {
   
 // resolve запустит первую функцию, переданную в .then (в не зависимости от имени параметра)(имя параметра - условно-интуитивно-понятное)
 promise.then(
-    // error => alert("error: " + error),     // done!  (для полож рез сработает всегда первая инструкция)
+    // error => alert("error: " + error),     // done!  (для полож resolve сработает всегда первая инструкция)
     kresult1 => alert(kresult1),             // done!   (через одну секунду)      - отработает, т.к. первая инструкция
-    error => alert(error)                   // не будет запущена             (полож рез направляется в первую инстр)
+    error => alert(error)                   // не будет запущена             (полож resolve направляется в первую инстр)
 );
 
 
@@ -59,16 +59,16 @@ promise1.then(
 
 //Если мы заинтересованы только в результате успешного выполнения задачи, то в обработчик then можно передать только одну функцию:
 
-let promise2 = new Promise(resolve => {
+let promise2 = new Promise(resolve => {  //  присутствие reject необязательно
   setTimeout(() => resolve("done!"), 1000);
 });
-promise2.then(alert); // done!  ( = promise2.then(berror => alert(berror)) )
-
+promise2.then(alert); // done!  
+// promise2.then(berror => alert(berror)); // (первьій) по-обьічному аргумент then - для успешного выполнения задачи
 
 
 //Если мы хотели бы только обработать ошибку, то можно использовать null в качестве первого аргумента::
 
-let promise3 = new Promise(function(resolve, reject)  { // обязательное присутствие resolve
+let promise3 = new Promise(function(resolve, reject)  { // обязательное присутствие resolve, даже если обрабатьіваем только ошибку
     setTimeout(() => reject(new Error("Whoops!")), 1000);
 });
 // promise3.then(null, error => alert(error));             // первая инстр в обработчике then - для положительного результата
