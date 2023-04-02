@@ -22,17 +22,17 @@ function loadGithubUser(log) {                  // завантажити з Git
 }
 
 function showAvatar(githubUser) {               // оброюляемо json-файл користувача з Github
-  return new Promise(function(resolve, reject) {// повертаємо проміс для можливості наступних (за showAvatar) дій через setTimeout
+  // return new Promise(function(resolve, reject) {// повертаємо проміс для можливості наступних (за showAvatar) дій через setTimeout
     let img = document.createElement('img');    // створення віртуального тегу <img>
     img.src = githubUser.avatar_url;            // githubUser.avatar_url - стандартна адреса аватара користувача на Github
     img.className = "promise-avatar-example";
     document.body.append(img);                  // добавлення віртуального тегу <img> на html-сторінку
 
-    setTimeout(() => {                          // встановлення затримки до знищення віртуального тегу <img>
-      img.remove();
-      resolve(githubUser);                    //  повертаємо githubUser для подальшої обробки у наступному then
-    }, 3000);
-  });
+    // setTimeout(() => {                          // встановлення затримки до знищення віртуального тегу <img>
+    //   img.remove();
+    //   resolve(githubUser);                    //  повертаємо githubUser для подальшої обробки у наступному then
+    // }, 3000);
+  // });
 }
 
 // Используем их:

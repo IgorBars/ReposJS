@@ -16,7 +16,7 @@ fetch('https://api.github.com/users')
   })
   .then(function(text) {
     // ...и здесь содержимое полученного файла
-    alert(text);// { "HTML": 1054734, ... }
+    alert(text);// [{ "login": "Mojombo"... 
   })
   .catch(alert);// ловим ошибку (например, загрузки со своей папки)
 

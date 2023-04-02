@@ -22,17 +22,15 @@ function loadScript(src) {
 
 loadScript("E:/JAWASCRIPT/JS - Visual Studio/JAWAScript/11_Promisy/3_Promisy - zepochkaPromisov/article/promise-chaining/one.js")
 
-  .then(script => loadScript("E:/JAWASCRIPT/JS - Visual Studio/JAWAScript/11_Promisy/3_Promisy - zepochkaPromisov/article/promise-chaining/two.js"),
-  )
+  .then(script => loadScript("E:/JAWASCRIPT/JS - Visual Studio/JAWAScript/11_Promisy/3_Promisy - zepochkaPromisov/article/promise-chaining/two.js"))
 
-  .then(script => loadScript("E:/JAWASCRIPT/JS - Visual Studio/JAWAScript/11_Promisy/3_Promisy - zepochkaPromisov/article/promise-chaining/three.js"),
-  )
+  .then(script => loadScript("E:/JAWASCRIPT/JS - Visual Studio/JAWAScript/11_Promisy/3_Promisy - zepochkaPromisov/article/promise-chaining/three.js"))
 
   .then(script => {
     one();
     two();
     three();
-  });
+});
 
 
 

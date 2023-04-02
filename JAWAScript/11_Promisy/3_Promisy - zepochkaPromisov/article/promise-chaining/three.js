@@ -1,6 +1,3 @@
 function three() {
     alert("three");
 }
-
-
-

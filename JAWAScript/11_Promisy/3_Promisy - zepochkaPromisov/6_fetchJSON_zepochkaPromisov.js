@@ -1,4 +1,5 @@
 /* JawaScript - 6_fetchJSON_zepochkaPromisov
+
 https://api.github.com/users  -  получаем имя по логину
  // "login": "mojombo"  / "login": "defunkt"
 */

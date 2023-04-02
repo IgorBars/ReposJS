@@ -19,10 +19,10 @@ class Thenable {
 }
 
 
-new Promise(resolve => resolve(1))  // допустим, результат ф-и в промисе =1
+new Promise(resolve => resolve(1))  // допустим, результат затяжной ф-и в промисе =1
 
   .then(result => {             
-    return new Thenable(result);    // обработчиком .then возвращаем совместимый then-класс (Thenable)
+    return new Thenable(result);    // обработчиком .then возвращаем об'ьект совместимого then-класса (Thenable)
   })
 
   .then(result => {     

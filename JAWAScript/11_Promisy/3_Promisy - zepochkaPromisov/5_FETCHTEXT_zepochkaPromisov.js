@@ -24,7 +24,7 @@ fetch('https://api.github.com/users/iliakan')               // На первич
   .then(function(text) {                                   // ожидаем текст-ответ
     // ...и здесь читабельное содержимое полученного файла 
     // благодаря применению метода-запроса response.text()
-    alert(text); // {"login": "iliakan", ...
+    alert(text.slice(0, 50) + "..."); // {"login": "iliakan", ...       (скопируем первьіе 50 символов строки текста-ответа)
   })
   .catch(error => alert(error));//( если ошибка загрузки - TypeError: Failed to fetchTypeError: Failed to fetch)
 
