@@ -40,10 +40,14 @@ promise.then(
 );
 
 // 2-й обработчик .then:
-promise.then(script => alert(script));  // [object HTMLScriptElement]           (при ошибке загрузки ложньій script)
+promise.then(script => alert(`${script.src} загружен(2)`));  // [object HTMLScriptElement]           (при ошибке загрузки ложньій script)
 
 // 3-й обработчик .then:
-promise.then(script => alert(`Ещё один обработчик. Адрес загрузки: ${script.src}`));
+promise.then(script => alert(`${script.src} загружен(3)`))
+
+  // then без new Promise - синхронньій код, передает результат дальше, но не ждет асинхронньіх вьіполнений
+  .then(script => setTimeout(() => alert(`${script.src} загружен(4)`), 3000))         //  НЕ СРАБОТАЕТ !
+  .then(script => alert(`${script.src} загружен(5)`));                                // undefined загружен(5)
 
 
 // По сути в promise хранится об'ьект, переданньій колбеком resolve и содержащий загруженньій скрипт (createElement => HTMLScriptElement)
